@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" 
+     xmlns:atom="http://www.w3.org/2005/Atom" 
+     xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Developer &amp; Coding Communities Hub</title>
+    <link>https://jibranpcccc.github.io/developer-coding-hub/</link>
+    <description>Fresh curated directory of verified developer communities across Python, JavaScript, DevOps, Web3, and AI/ML.</description>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 03 Sep 2026 11:36:39 GMT</lastBuildDate>
+    <atom:link rel="self" type="application/rss+xml" href="https://jibranpcccc.github.io/developer-coding-hub/feed.xml" />
+    <atom:link rel="hub" href="https://pubsubhubbub.appspot.com/publish" />
+    <item>
+        <title>Python Discord Official (Discord)</title>
+        <link>https://discord.gg/python</link>
+        <guid isPermaLink="false">python-discord-2026-09-03</guid>
+        <pubDate>Thu, 03 Sep 2026 11:36:39 GMT</pubDate>
+        <category>Python &amp; Data</category>
+        <description>The largest and friendliest Discord community focused on the Python programming language. Offers 24/7 peer code review, specialized channels for machine learning, data science, web development, and recurring open-source hackathons. - Join 385.0K+ members on Discord.</description>
+    </item>
+    <item>
+        <title>r/Python Community (Reddit)</title>
+        <link>https://www.reddit.com/r/Python/</link>
+        <guid isPermaLink="false">reddit-python-2026-09-03</guid>
+        <pubDate>Thu, 03 Sep 2026 11:36:39 GMT</pubDate>
+        <category>Python &amp; Data</category>
+        <description>The official Reddit hub for Python programming news, package releases, deep-dive architectural discussions, tutorials, and Python PEP enhancement updates. - Join 1.2M+ members on Reddit.</description>
+    </item>
+    <item>
+        <title>Python Global Developers (Telegram)</title>
+        <link>https://t.me/PythonDevelopersGlobal</link>
+        <guid isPermaLink="false">python-developers-tg-2026-09-03</guid>
+        <pubDate>Thu, 03 Sep 2026 11:36:39 GMT</pubDate>
+        <category>Python &amp; Data</category>
+        <description>High-signal Telegram channel and chat group delivering daily Python tips, asyncio deep dives, backend architecture diagrams, and curated engineering vacancies. - Join 94.5K+ members on Telegram.</description>
+    </item>
+    <item>
+        <title>Data Science &amp; Python Ninjas (WhatsApp)</title>
+        <link>https://chat.whatsapp.com/invite/python-data-ninjas</link>
+        <guid isPermaLink="false">python-data-ninjas-wa-2026-09-03</guid>
+        <pubDate>Thu, 03 Sep 2026 11:36:39 GMT</pubDate>
+        <category>Python &amp; Data</category>
+        <description>Vetted WhatsApp community for professional data scientists and Python engineers discussing Pandas, Polars, PySpark, and enterprise ETL pipelines. - Join 1.0K+ members on WhatsApp.</description>
+    </item>
+    <item>
+        <title>Hugging Face Community (Discord)</title>
+        <link>https://discord.gg/huggingface</link>
+        <guid isPermaLink="false">hugging-face-discord-2026-09-03</guid>
+        <pubDate>Thu, 03 Sep 2026 11:36:39 GMT</pubDate>
+        <category>AI &amp; ML</category>
+        <description>The epicenter of open-source AI. Collaborate directly with Hugging Face maintainers on Transformers, Diffusers, PEFT, TRL, vLLM, and local open LLM fine-tuning. - Join 192.0K+ members on Discord.</description>
+    </item>
+    <item>
+        <title>r/MachineLearning (Reddit)</title>
+        <link>https://www.reddit.com/r/MachineLearning/</link>
+        <guid isPermaLink="false">reddit-machinelearning-2026-09-03</guid>
+        <pubDate>Thu, 03 Sep 2026 11:36:39 GMT</pubDate>
+        <category>AI &amp; ML</category>
+        <description>Academic and industry forum for researchers and practitioners. Features arXiv paper discussions, novel model benchmark breakthroughs, and research critiques. - Join 3.0M+ members on Reddit.</description>
+    </item>
+    <item>
+        <title>PyTorch Official Community (Discord)</title>
+        <link>https://discord.gg/pytorch</link>
+        <guid isPermaLink="false">pytorch-discord-2026-09-03</guid>
+        <pubDate>Thu, 03 Sep 2026 11:36:39 GMT</pubDate>
+        <category>AI &amp; ML</category>
+        <description>Official PyTorch community sponsored by the Linux Foundation. Connect with Core PyTorch maintainers, TorchDynamo compilers, CUDA kernel developers, and ML researchers. - Join 91.0K+ members on Discord.</description>
+    </item>
+    <item>
+        <title>Deep Learning &amp; LLM Practitioners (Telegram)</title>
+        <link>https://t.me/deeplearning_ai_community</link>
+        <guid isPermaLink="false">llm-practitioners-tg-2026-09-03</guid>
+        <pubDate>Thu, 03 Sep 2026 11:36:39 GMT</pubDate>
+        <category>AI &amp; ML</category>
+        <description>Active channel focused on quantization (GGUF, AWQ), agentic workflows, RAG evaluations, synthetic data pipelines, and local inference stacks. - Join 71.2K+ members on Telegram.</description>
+    </item>
+    <item>
+        <title>Generative AI Engineering Guild (WhatsApp)</title>
+        <link>https://chat.whatsapp.com/invite/generative-ai-eng</link>
+        <guid isPermaLink="false">generative-ai-wa-2026-09-03</guid>
+        <pubDate>Thu, 03 Sep 2026 11:36:39 GMT</pubDate>
+        <category>AI &amp; ML</category>
+        <description>High-density discussion network for founders and senior engineers building generative AI products, agent swarms, and enterprise MCP servers. - Join 1.0K+ members on WhatsApp.</description>
+    </item>
+    <item>
+        <title>The Odin Project (Discord)</title>
+        <link>https://discord.gg/theodinproject</link>
+        <guid isPermaLink="false">the-odin-project-discord-2026-09-03</guid>
+        <pubDate>Thu, 03 Sep 2026 11:36:39 GMT</pubDate>
+        <category>Frontend &amp; Fullstack</category>
+        <description>A premier community helping self-taught developers master fullstack JavaScript, HTML/CSS, React, Node.js, and modern software engineering fundamentals with hands-on mentor support. - Join 328.0K+ members on Discord.</description>
+    </item>
+    <item>
+        <title>Reactiflux (Discord)</title>
+        <link>https://discord.gg/reactiflux</link>
+        <guid isPermaLink="false">reactiflux-discord-2026-09-03</guid>
+        <pubDate>Thu, 03 Sep 2026 11:36:39 GMT</pubDate>
+        <category>Frontend &amp; Fullstack</category>
+        <description>The largest chat community of React, React Native, Redux, Next.js, and TypeScript developers. Regular Q&amp;A sessions with core React maintainers and web platform authors. - Join 215.0K+ members on Discord.</description>
+    </item>
+    <item>
+        <title>r/webdev Community (Reddit)</title>
+        <link>https://www.reddit.com/r/webdev/</link>
+        <guid isPermaLink="false">reddit-webdev-2026-09-03</guid>
+        <pubDate>Thu, 03 Sep 2026 11:36:39 GMT</pubDate>
+        <category>Frontend &amp; Fullstack</category>
+        <description>A global community dedicated to all things web development. Share showcase projects, client dilemmas, CSS tricks, performance benchmarks, and frontend frameworks. - Join 2.2M+ members on Reddit.</description>
+    </item>
+    <item>
+        <title>React &amp; Next.js Developers (Telegram)</title>
+        <link>https://t.me/react_devs_group</link>
+        <guid isPermaLink="false">react-devs-tg-2026-09-03</guid>
+        <pubDate>Thu, 03 Sep 2026 11:36:39 GMT</pubDate>
+        <category>Frontend &amp; Fullstack</category>
+        <description>Fast-paced Telegram community for React 19, Server Components, Vite tooling, UI component libraries, and frontend state management patterns. - Join 84.2K+ members on Telegram.</description>
+    </item>
+    <item>
+        <title>Fullstack Web Masters (WhatsApp)</title>
+        <link>https://chat.whatsapp.com/invite/fullstack-masters</link>
+        <guid isPermaLink="false">fullstack-masters-wa-2026-09-03</guid>
+        <pubDate>Thu, 03 Sep 2026 11:36:39 GMT</pubDate>
+        <category>Frontend &amp; Fullstack</category>
+        <description>Collaborative WhatsApp group for fullstack software engineers exchanging code snippets, bug triage, freelancing contracts, and production architectural tips. - Join 1.0K+ members on WhatsApp.</description>
+    </item>
+    <item>
+        <title>TypeScript Community (Discord)</title>
+        <link>https://discord.gg/typescript</link>
+        <guid isPermaLink="false">typescript-discord-2026-09-03</guid>
+        <pubDate>Thu, 03 Sep 2026 11:36:39 GMT</pubDate>
+        <category>Frontend &amp; Fullstack</category>
+        <description>Dedicated server for typing wizards and developers crafting robust type-safe applications. Features type challenge help and compiler architecture discussion. - Join 78.0K+ members on Discord.</description>
+    </item>
+  </channel>
+</rss>

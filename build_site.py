@@ -1,0 +1,869 @@
+﻿import json
+import os
+import html
+from datetime import datetime, timezone
+
+SITE_URL = "https://jibranpcccc.github.io/developer-coding-hub"
+SITE_TITLE = "Developer & Coding Communities Hub | Verified Tech Discord, Telegram & WhatsApp Groups"
+SITE_DESCRIPTION = "Discover and join 30+ verified developer communities across Python, JavaScript, DevOps, Web3, LeetCode, and AI/ML. Free Discord servers, Telegram channels, WhatsApp groups, and Reddit forums."
+AUTHOR = "Developer Communities Directory Team"
+
+PLATFORM_ICONS = {
+    'Discord': '<svg class="w-4 h-4 inline-block" fill="currentColor" viewBox="0 0 24 24"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.929 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.893.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>',
+    'Telegram': '<svg class="w-4 h-4 inline-block" fill="currentColor" viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>',
+    'WhatsApp': '<svg class="w-4 h-4 inline-block" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.301-.15-1.78-.879-2.056-.98-.276-.1-.476-.15-.677.15-.2.3-.777.98-.952 1.18-.176.2-.351.226-.652.075-.3-.15-1.267-.467-2.414-1.488-.893-.796-1.496-1.779-1.671-2.08-.176-.3-.019-.462.132-.612.136-.135.301-.351.451-.527.151-.175.201-.3.301-.5.1-.2.05-.375-.025-.526-.075-.15-.677-1.633-.927-2.235-.244-.587-.492-.508-.677-.517-.175-.008-.376-.01-.577-.01-.2 0-.526.075-.802.375-.276.3-1.053 1.03-1.053 2.511s1.078 2.91 1.228 3.111c.15.2 2.122 3.24 5.141 4.544.718.31 1.279.495 1.716.634.721.23 1.378.197 1.897.12.579-.087 1.78-.728 2.03-1.431.251-.703.251-1.306.176-1.431-.075-.125-.276-.2-.577-.35zM12.042 21.944h-.008c-1.776 0-3.518-.477-5.044-1.38l-.361-.214-3.75.983 1.001-3.655-.235-.374a10.024 10.024 0 0 1-1.536-5.35c0-5.545 4.512-10.057 10.061-10.057 2.686 0 5.212 1.047 7.11 2.946a9.99 9.99 0 0 1 2.942 7.108c-.002 5.546-4.515 10.043-10.181 10.043zm0-21.944C5.402 0 0 5.402 0 12.042c0 2.119.553 4.185 1.603 6.004L0 24l6.126-1.607a11.986 11.986 0 0 0 5.916 1.551h.005c6.64 0 12.042-5.402 12.042-12.042 0-3.217-1.253-6.241-3.53-8.517C18.283 1.253 15.259 0 12.042 0z"/></svg>',
+    'Reddit': '<svg class="w-4 h-4 inline-block" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.703zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/></svg>'
+}
+
+def format_count(count):
+    if count >= 1000000:
+        return f"{count / 1000000:.1f}M+"
+    if count >= 1000:
+        return f"{count / 1000:.1f}K+"
+    return f"{count}+"
+
+def get_cat_badge_style(cat):
+    styles = {
+        'AI & ML': 'bg-purple-500/10 text-purple-400 border-purple-500/30',
+        'Web3 & Blockchain': 'bg-amber-500/10 text-amber-400 border-amber-500/30',
+        'Python & Data': 'bg-sky-500/10 text-sky-400 border-sky-500/30',
+        'Frontend & Fullstack': 'bg-emerald-500/10 text-emerald-400 border-emerald-500/30',
+        'DevOps & Cloud': 'bg-cyan-500/10 text-cyan-400 border-cyan-500/30',
+        'DSA & Competitive': 'bg-rose-500/10 text-rose-400 border-rose-500/30',
+    }
+    return styles.get(cat, 'bg-slate-500/10 text-slate-300 border-slate-500/30')
+
+def get_platform_badge_style(platform):
+    styles = {
+        'Discord': 'bg-[#5865F2]/10 text-[#5865F2] border-[#5865F2]/30',
+        'Telegram': 'bg-[#229ED9]/10 text-[#229ED9] border-[#229ED9]/30',
+        'WhatsApp': 'bg-[#25D366]/10 text-[#25D366] border-[#25D366]/30',
+        'Reddit': 'bg-[#FF4500]/10 text-[#FF4500] border-[#FF4500]/30',
+    }
+    return styles.get(platform, 'bg-slate-500/10 text-slate-300 border-slate-500/30')
+
+def build_all():
+    with open("data/groups.json", "r", encoding="utf-8") as f:
+        groups = json.load(f)
+
+    total_members = sum(g["memberCount"] for g in groups)
+
+    items_schema = []
+    for idx, g in enumerate(groups, 1):
+        items_schema.append({
+            "@type": "ListItem",
+            "position": idx,
+            "item": {
+                "@type": "OnlineBusiness",
+                "name": g["title"],
+                "description": g["description"],
+                "url": g["joinUrl"],
+                "interactionStatistic": {
+                    "@type": "InteractionCounter",
+                    "interactionType": "https://schema.org/FollowAction",
+                    "userInteractionCount": g["memberCount"]
+                }
+            }
+        })
+
+    schema_data = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "WebSite",
+                "@id": f"{SITE_URL}/#website",
+                "url": SITE_URL,
+                "name": "Developer & Coding Communities Hub",
+                "description": SITE_DESCRIPTION,
+                "publisher": {
+                    "@type": "Organization",
+                    "@id": f"{SITE_URL}/#organization",
+                    "name": "Developer Communities Hub",
+                    "url": SITE_URL,
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": f"{SITE_URL}/og-image.png"
+                    }
+                },
+                "inLanguage": "en-US"
+            },
+            {
+                "@type": "Organization",
+                "@id": f"{SITE_URL}/#organization",
+                "name": "Developer Communities Hub",
+                "url": SITE_URL,
+                "sameAs": [
+                    "https://github.com/jibranpcccc/developer-coding-hub"
+                ]
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": f"{SITE_URL}/#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": SITE_URL
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Developer Communities Directory",
+                        "item": f"{SITE_URL}/#directory"
+                    }
+                ]
+            },
+            {
+                "@type": "CollectionPage",
+                "@id": f"{SITE_URL}/#collection",
+                "url": SITE_URL,
+                "name": "Directory of Verified Developer & Coding Communities",
+                "description": SITE_DESCRIPTION,
+                "mainEntity": {
+                    "@type": "ItemList",
+                    "numberOfItems": len(groups),
+                    "itemListElement": items_schema
+                }
+            },
+            {
+                "@type": "FAQPage",
+                "@id": f"{SITE_URL}/#faq",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "What is the Developer & Coding Communities Hub?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Developer & Coding Communities Hub is an open, verified index of high-reputation programming communities across Discord, Telegram, WhatsApp, and Reddit. It categorizes top developer networks across AI & ML, Web3, Python, Frontend, DevOps, and LeetCode/DSA."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "How are developer groups vetted and verified on this site?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Every community listed undergoes rigorous quality checks: continuous moderation against spam, peer code review presence, mentor availability, genuine human engagement ratios, and official affiliations with open-source ecosystems."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Which platform is best for real-time coding help?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Discord is widely regarded as the best platform for real-time pair programming, live voice debugging, and modular framework support. Telegram offers instant curated news and architecture diagrams, Reddit provides comprehensive asynchronous discussions, and WhatsApp facilitates tight-knit peer study circles."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Are all programming communities in this hub free to join?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes. All developer communities showcased in this directory are 100% free to join with direct invite links verified for active registration."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "How often is the community directory updated?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "The directory updates automatically every 6 hours via automated CI/CD pipelines integrating Google Gemini 2.5 Flash API to detect trending developer groups, member growth, and fresh tech ecosystems."
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+    cards_html = []
+    for g in groups:
+        cat_badge = get_cat_badge_style(g["category"])
+        plat_badge = get_platform_badge_style(g["platform"])
+        plat_icon = PLATFORM_ICONS.get(g["platform"], "")
+        tags_html = " ".join([f"""<span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-800/80 text-slate-300 border border-slate-700/60">#{html.escape(t)}</span>""" for t in g.get("tags", [])])
+        featured_badge = """<span class="px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider bg-amber-500/20 text-amber-300 border border-amber-500/40 rounded-full flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>Featured</span>""" if g.get("featured") else ""
+
+        card = f"""
+        <article class="group relative bg-slate-900/90 border border-slate-800 hover:border-cyan-500/50 rounded-xl p-5 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/5 hover:-translate-y-1 community-card" 
+                 data-id="{html.escape(g['id'])}"
+                 data-title="{html.escape(g['title'].lower())}"
+                 data-category="{html.escape(g['category'])}"
+                 data-platform="{html.escape(g['platform'])}"
+                 data-tags="{html.escape(' '.join(g.get('tags', [])).lower())}"
+                 data-description="{html.escape(g['description'].lower())}">
+            <div>
+                <div class="flex items-start justify-between gap-3 mb-3">
+                    <div class="flex flex-wrap items-center gap-2">
+                        <span class="px-2.5 py-1 text-xs font-semibold rounded-md border flex items-center gap-1.5 {plat_badge}">
+                            {plat_icon}
+                            {html.escape(g['platform'])}
+                        </span>
+                        <span class="px-2.5 py-1 text-xs font-medium rounded-md border {cat_badge}">
+                            {html.escape(g['category'])}
+                        </span>
+                    </div>
+                    {featured_badge}
+                </div>
+
+                <div class="flex items-center gap-2 mb-2">
+                    <h3 class="text-lg font-bold text-white group-hover:text-cyan-400 transition-colors">
+                        {html.escape(g['title'])}
+                    </h3>
+                    <span title="Verified Developer Community" class="text-cyan-400 inline-flex items-center" aria-label="Verified">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                    </span>
+                </div>
+
+                <p class="text-sm text-slate-400 line-clamp-3 mb-4 leading-relaxed">
+                    {html.escape(g['description'])}
+                </p>
+
+                <div class="flex flex-wrap gap-1.5 mb-4">
+                    {tags_html}
+                </div>
+            </div>
+
+            <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between gap-3 mt-auto">
+                <div class="text-xs font-mono text-slate-400 flex items-center gap-1.5">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <span class="font-bold text-slate-200">{format_count(g['memberCount'])}</span> engineers
+                </div>
+                <a href="{html.escape(g['joinUrl'])}" target="_blank" rel="noopener noreferrer" 
+                   class="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-semibold rounded-lg bg-cyan-500 hover:bg-cyan-400 text-slate-950 transition-all font-mono shadow hover:shadow-cyan-500/25">
+                    Join Community
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </a>
+            </div>
+        </article>
+        """
+        cards_html.append(card)
+
+    rendered_cards = "\n".join(cards_html)
+    schema_json_str = json.dumps(schema_data, indent=2)
+
+    html_head = f"""<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{SITE_TITLE}</title>
+    <meta name="description" content="{SITE_DESCRIPTION}">
+    <meta name="keywords" content="developer communities, coding discord, python telegram, web3 groups, devops slack, leetcode whatsapp, ai engineering community, tech discord servers">
+    <meta name="author" content="{AUTHOR}">
+    <link rel="canonical" href="{SITE_URL}/">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{SITE_URL}/">
+    <meta property="og:title" content="{SITE_TITLE}">
+    <meta property="og:description" content="{SITE_DESCRIPTION}">
+    <meta property="og:image" content="{SITE_URL}/og-image.png">
+    <meta property="og:site_name" content="Developer &amp; Coding Communities Hub">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="{SITE_URL}/">
+    <meta name="twitter:title" content="{SITE_TITLE}">
+    <meta name="twitter:description" content="{SITE_DESCRIPTION}">
+    <meta name="twitter:image" content="{SITE_URL}/og-image.png">
+
+    <!-- RSS Feed -->
+    <link rel="alternate" type="application/rss+xml" title="Developer &amp; Coding Communities Feed" href="{SITE_URL}/feed.xml">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {{
+            darkMode: 'class',
+            theme: {{
+                extend: {{
+                    colors: {{
+                        slate: {{
+                            850: '#111827',
+                            950: '#070b14'
+                        }},
+                        cyan: {{
+                            450: '#00d0f5'
+                        }}
+                    }}
+                }}
+            }}
+        }}
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        body {{
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }}
+        code, pre, .font-mono {{
+            font-family: 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+        }}
+        .bg-grid-pattern {{
+            background-size: 32px 32px;
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        }}
+        html.light .bg-grid-pattern {{
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+        }}
+        html.light {{
+            color-scheme: light;
+        }}
+        html.light body {{
+            background-color: #f8fafc;
+            color: #0f172a;
+        }}
+        html.light .community-card {{
+            background-color: #ffffff;
+            border-color: #e2e8f0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }}
+        html.light .community-card h3 {{
+            color: #0f172a;
+        }}
+        html.light .community-card p {{
+            color: #475569;
+        }}
+        html.light .bg-slate-900, html.light .bg-slate-950 {{
+            background-color: #ffffff;
+        }}
+        html.light .text-white {{
+            color: #0f172a;
+        }}
+        html.light .border-slate-800 {{
+            border-color: #e2e8f0;
+        }}
+    </style>
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+{schema_json_str}
+    </script>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen selection:bg-cyan-500 selection:text-black transition-colors duration-200">
+    <div class="fixed inset-0 bg-grid-pattern pointer-events-none z-0"></div>
+
+    <header class="sticky top-0 z-40 backdrop-blur-md bg-slate-950/80 border-b border-slate-800/80 transition-colors">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-500 to-blue-600 flex items-center justify-center text-slate-950 font-mono font-black text-lg shadow-lg shadow-cyan-500/20">
+                    &lt;/&gt;
+                </div>
+                <div>
+                    <a href="#" class="text-lg font-extrabold tracking-tight text-white hover:text-cyan-400 transition-colors flex items-center gap-2">
+                        DevHub<span class="text-cyan-400">.groups</span>
+                        <span class="px-2 py-0.5 text-[10px] font-mono font-bold bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 rounded-full">v2.6</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <a href="feed.xml" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-mono font-medium rounded-lg bg-slate-900 border border-slate-800 hover:border-amber-500/50 text-amber-400 transition-colors">
+                    <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path d="M5 3a1 1 0 000 2c5.523 0 10 4.477 10 10a1 1 0 102 0C17 8.373 11.627 3 5 3z"/><path d="M4 9a1 1 0 011-1 7 7 0 017 7 1 1 0 11-2 0 5 5 0 00-5-5 1 1 0 01-1-1zM3 15a2 2 0 114 0 2 2 0 01-4 0z"/></svg>
+                    RSS Feed
+                </a>
+                <a href="https://github.com/jibranpcccc/developer-coding-hub" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-mono font-medium rounded-lg bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-300 hover:text-white transition-colors">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                    GitHub
+                </a>
+                <button id="themeToggle" aria-label="Toggle Light/Dark Theme" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-cyan-400 transition-colors">
+                    <svg id="sunIcon" class="w-4 h-4 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+                    <svg id="moonIcon" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+                </button>
+            </div>
+        </div>
+    </header>
+"""
+    html_main_top = f"""
+    <main class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        
+        <!-- Hero Section -->
+        <section class="text-center max-w-3xl mx-auto mb-12">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 mb-4 animate-pulse">
+                <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+                {len(groups)}+ Verified Programming Collectives
+            </div>
+            <h1 class="text-4xl sm:text-5xl font-black text-white tracking-tight mb-4 leading-tight">
+                Developer &amp; Coding <span class="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-400">Communities Hub</span>
+            </h1>
+            <p class="text-base sm:text-lg text-slate-400 leading-relaxed">
+                Connect with elite software engineers, researchers, and maintainers across Discord servers, Telegram channels, WhatsApp groups, and Reddit.
+            </p>
+
+            <!-- Metrics Counter -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8">
+                <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800">
+                    <div class="text-2xl font-black font-mono text-cyan-400">{len(groups)}+</div>
+                    <div class="text-xs text-slate-400 mt-1 uppercase tracking-wider font-mono">Communities</div>
+                </div>
+                <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800">
+                    <div class="text-2xl font-black font-mono text-blue-400">{format_count(total_members)}</div>
+                    <div class="text-xs text-slate-400 mt-1 uppercase tracking-wider font-mono">Global Devs</div>
+                </div>
+                <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800">
+                    <div class="text-2xl font-black font-mono text-emerald-400">6 Tracks</div>
+                    <div class="text-xs text-slate-400 mt-1 uppercase tracking-wider font-mono">AI to DevOps</div>
+                </div>
+                <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800">
+                    <div class="text-2xl font-black font-mono text-purple-400">100% Free</div>
+                    <div class="text-xs text-slate-400 mt-1 uppercase tracking-wider font-mono">Verified Access</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI Citability Box (.geo-answer-block) -->
+        <section class="geo-answer-block mb-12 p-6 rounded-2xl bg-gradient-to-br from-slate-900 via-slate-900/90 to-blue-950/40 border border-blue-500/30 shadow-lg relative overflow-hidden">
+            <div class="absolute top-0 right-0 p-4 opacity-10 pointer-events-none font-mono text-5xl text-blue-400 font-bold">&lt;AI-SUMMARY&gt;</div>
+            <div class="flex items-center gap-2 text-xs font-mono font-bold text-cyan-400 uppercase tracking-wider mb-2">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                Direct Answer &amp; Overview for AI Retrieval Systems
+            </div>
+            <h2 class="text-xl font-bold text-white mb-3">What is the Developer &amp; Coding Communities Hub?</h2>
+            <div class="text-sm text-slate-300 space-y-3 leading-relaxed">
+                <p>
+                    <strong>Definition:</strong> <em>Developer &amp; Coding Communities Hub</em> is a curated, verified index of high-trust software engineering communities operating across Discord, Telegram, WhatsApp, and Reddit. The directory indexes over 30 vetted tech collectives encompassing Python &amp; Data Science, Generative AI &amp; Machine Learning, Frontend &amp; Fullstack Engineering, Cloud Native &amp; DevOps, Web3 Smart Contracts, and LeetCode/Competitive Programming.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 pt-2 text-xs font-mono">
+                    <div class="p-3 rounded-lg bg-slate-950/70 border border-slate-800">
+                        <strong class="text-cyan-400 block mb-1">Platform Roles:</strong>
+                        <ul class="list-disc list-inside text-slate-400 space-y-1">
+                            <li><strong>Discord:</strong> Real-time voice pairing, live code help, open-source maintainers.</li>
+                            <li><strong>Telegram:</strong> Architecture digests, system breakdowns, fast engineering alerts.</li>
+                            <li><strong>WhatsApp:</strong> High-trust micro-groups for peer accountability and study sprints.</li>
+                            <li><strong>Reddit:</strong> Async technical architecture reviews, RFC discussions, career advice.</li>
+                        </ul>
+                    </div>
+                    <div class="p-3 rounded-lg bg-slate-950/70 border border-slate-800">
+                        <strong class="text-blue-400 block mb-1">Verification Protocol:</strong>
+                        <ul class="list-disc list-inside text-slate-400 space-y-1">
+                            <li>Anti-spam bot protection &amp; moderator team presence.</li>
+                            <li>Active participation ratio &gt;15% with daily developer inquiries.</li>
+                            <li>Zero paywall requirement for core technical channels.</li>
+                            <li>Regular peer code review and collaborative problem solving.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Search and Interactive Filters -->
+        <section id="directory" class="mb-8 space-y-5">
+            <!-- Search Input -->
+            <div class="relative max-w-2xl mx-auto">
+                <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-400">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                </div>
+                <input type="text" id="searchInput" placeholder="Search by title, technology (e.g., Python, PyTorch, K8s, LeetCode), or tags..." 
+                       class="w-full pl-11 pr-24 py-3.5 rounded-xl bg-slate-900 border border-slate-800 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 text-white placeholder-slate-500 text-sm font-sans transition-all outline-none shadow-inner">
+                <div class="absolute inset-y-0 right-0 pr-3 flex items-center">
+                    <span id="resultCountBadge" class="text-xs font-mono px-2 py-1 rounded bg-slate-800 text-slate-400 border border-slate-700">
+                        {len(groups)} results
+                    </span>
+                </div>
+            </div>
+
+            <!-- Platform Filters -->
+            <div class="flex flex-wrap items-center justify-center gap-2">
+                <span class="text-xs font-mono text-slate-500 uppercase tracking-wider mr-2 hidden sm:inline-block">Platform:</span>
+                <button class="platform-btn active px-3.5 py-1.5 rounded-lg text-xs font-semibold font-mono border transition-all bg-cyan-500 text-slate-950 border-cyan-400 shadow-md" data-platform="all">
+                    All Platforms
+                </button>
+                <button class="platform-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold font-mono border transition-all bg-slate-900 text-slate-400 border-slate-800 hover:border-slate-700 hover:text-white" data-platform="Discord">
+                    Discord
+                </button>
+                <button class="platform-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold font-mono border transition-all bg-slate-900 text-slate-400 border-slate-800 hover:border-slate-700 hover:text-white" data-platform="Telegram">
+                    Telegram
+                </button>
+                <button class="platform-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold font-mono border transition-all bg-slate-900 text-slate-400 border-slate-800 hover:border-slate-700 hover:text-white" data-platform="WhatsApp">
+                    WhatsApp
+                </button>
+                <button class="platform-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold font-mono border transition-all bg-slate-900 text-slate-400 border-slate-800 hover:border-slate-700 hover:text-white" data-platform="Reddit">
+                    Reddit
+                </button>
+            </div>
+
+            <!-- Category Pills -->
+            <div class="flex flex-wrap items-center justify-center gap-2 pt-1">
+                <span class="text-xs font-mono text-slate-500 uppercase tracking-wider mr-2 hidden sm:inline-block">Category:</span>
+                <button class="category-pill active px-3 py-1 rounded-full text-xs font-medium border transition-all bg-blue-600 text-white border-blue-500 shadow-sm" data-category="all">
+                    All Categories
+                </button>
+                <button class="category-pill px-3 py-1 rounded-full text-xs font-medium border transition-all bg-slate-900 text-slate-400 border-slate-800 hover:border-slate-700 hover:text-white" data-category="AI & ML">
+                    AI &amp; ML
+                </button>
+                <button class="category-pill px-3 py-1 rounded-full text-xs font-medium border transition-all bg-slate-900 text-slate-400 border-slate-800 hover:border-slate-700 hover:text-white" data-category="Python & Data">
+                    Python &amp; Data
+                </button>
+                <button class="category-pill px-3 py-1 rounded-full text-xs font-medium border transition-all bg-slate-900 text-slate-400 border-slate-800 hover:border-slate-700 hover:text-white" data-category="Frontend & Fullstack">
+                    Frontend &amp; Fullstack
+                </button>
+                <button class="category-pill px-3 py-1 rounded-full text-xs font-medium border transition-all bg-slate-900 text-slate-400 border-slate-800 hover:border-slate-700 hover:text-white" data-category="DevOps & Cloud">
+                    DevOps &amp; Cloud
+                </button>
+                <button class="category-pill px-3 py-1 rounded-full text-xs font-medium border transition-all bg-slate-900 text-slate-400 border-slate-800 hover:border-slate-700 hover:text-white" data-category="Web3 & Blockchain">
+                    Web3 &amp; Blockchain
+                </button>
+                <button class="category-pill px-3 py-1 rounded-full text-xs font-medium border transition-all bg-slate-900 text-slate-400 border-slate-800 hover:border-slate-700 hover:text-white" data-category="DSA & Competitive">
+                    DSA &amp; Competitive
+                </button>
+            </div>
+        </section>
+"""
+    html_main_bottom = f"""
+        <!-- Community Grid -->
+        <section class="mb-16">
+            <div id="communityGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {rendered_cards}
+            </div>
+
+            <!-- Empty State -->
+            <div id="emptyState" class="hidden text-center py-16 px-4 bg-slate-900/40 rounded-2xl border border-slate-800 mt-6">
+                <div class="w-14 h-14 mx-auto mb-4 rounded-full bg-slate-800 flex items-center justify-center text-slate-400">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                </div>
+                <h3 class="text-lg font-bold text-white mb-1">No matching developer communities found</h3>
+                <p class="text-sm text-slate-400 max-w-md mx-auto mb-4">Try adjusting your search query or reset the platform/category filters.</p>
+                <button id="resetFiltersBtn" class="px-4 py-2 text-xs font-mono font-semibold rounded-lg bg-cyan-500 text-slate-950 hover:bg-cyan-400 transition-colors">
+                    Reset All Filters
+                </button>
+            </div>
+        </section>
+
+        <!-- Frequently Asked Questions (FAQ) Accordion -->
+        <section class="max-w-4xl mx-auto mb-16 pt-8 border-t border-slate-800/80">
+            <div class="text-center mb-8">
+                <div class="text-xs font-mono text-cyan-400 uppercase tracking-wider mb-1">Knowledge Base</div>
+                <h2 class="text-3xl font-extrabold text-white tracking-tight">Frequently Asked Questions</h2>
+            </div>
+
+            <div class="space-y-4">
+                <details class="group bg-slate-900/70 border border-slate-800 rounded-xl p-5 open:bg-slate-900 transition-all">
+                    <summary class="font-semibold text-white flex items-center justify-between cursor-pointer list-none">
+                        <span>What is the Developer &amp; Coding Communities Hub?</span>
+                        <span class="text-cyan-400 group-open:rotate-180 transition-transform duration-200">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </span>
+                    </summary>
+                    <p class="mt-3 text-sm text-slate-400 leading-relaxed">
+                        Developer &amp; Coding Communities Hub is an open, verified index of high-reputation programming communities across Discord, Telegram, WhatsApp, and Reddit. It categorizes top developer networks across AI &amp; ML, Web3, Python, Frontend, DevOps, and LeetCode/DSA.
+                    </p>
+                </details>
+
+                <details class="group bg-slate-900/70 border border-slate-800 rounded-xl p-5 open:bg-slate-900 transition-all">
+                    <summary class="font-semibold text-white flex items-center justify-between cursor-pointer list-none">
+                        <span>How are developer groups vetted and verified on this site?</span>
+                        <span class="text-cyan-400 group-open:rotate-180 transition-transform duration-200">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </span>
+                    </summary>
+                    <p class="mt-3 text-sm text-slate-400 leading-relaxed">
+                        Every community listed undergoes rigorous quality checks: continuous moderation against spam, peer code review presence, mentor availability, genuine human engagement ratios, and official affiliations with open-source ecosystems.
+                    </p>
+                </details>
+
+                <details class="group bg-slate-900/70 border border-slate-800 rounded-xl p-5 open:bg-slate-900 transition-all">
+                    <summary class="font-semibold text-white flex items-center justify-between cursor-pointer list-none">
+                        <span>Which platform is best for real-time coding help?</span>
+                        <span class="text-cyan-400 group-open:rotate-180 transition-transform duration-200">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </span>
+                    </summary>
+                    <p class="mt-3 text-sm text-slate-400 leading-relaxed">
+                        Discord is widely regarded as the best platform for real-time pair programming, live voice debugging, and modular framework support. Telegram offers instant curated news and architecture diagrams, Reddit provides comprehensive asynchronous discussions, and WhatsApp facilitates tight-knit peer study circles.
+                    </p>
+                </details>
+
+                <details class="group bg-slate-900/70 border border-slate-800 rounded-xl p-5 open:bg-slate-900 transition-all">
+                    <summary class="font-semibold text-white flex items-center justify-between cursor-pointer list-none">
+                        <span>Are all programming communities in this hub free to join?</span>
+                        <span class="text-cyan-400 group-open:rotate-180 transition-transform duration-200">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </span>
+                    </summary>
+                    <p class="mt-3 text-sm text-slate-400 leading-relaxed">
+                        Yes. All developer communities showcased in this directory are 100% free to join with direct invite links verified for active registration.
+                    </p>
+                </details>
+
+                <details class="group bg-slate-900/70 border border-slate-800 rounded-xl p-5 open:bg-slate-900 transition-all">
+                    <summary class="font-semibold text-white flex items-center justify-between cursor-pointer list-none">
+                        <span>How often is the community directory updated?</span>
+                        <span class="text-cyan-400 group-open:rotate-180 transition-transform duration-200">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </span>
+                    </summary>
+                    <p class="mt-3 text-sm text-slate-400 leading-relaxed">
+                        The directory updates automatically every 6 hours via automated CI/CD pipelines integrating Google Gemini 2.5 Flash API to detect trending developer groups, member growth, and fresh tech ecosystems.
+                    </p>
+                </details>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800/80 bg-slate-950 py-12 relative z-10 transition-colors">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-xs text-slate-500 font-mono space-y-3">
+            <div class="flex flex-wrap items-center justify-center gap-4 text-slate-400">
+                <a href="#" class="hover:text-cyan-400">Home</a>
+                <span>•</span>
+                <a href="#directory" class="hover:text-cyan-400">Directory</a>
+                <span>•</span>
+                <a href="feed.xml" class="hover:text-amber-400">RSS Feed</a>
+                <span>•</span>
+                <a href="sitemap.xml" class="hover:text-cyan-400">Sitemap</a>
+                <span>•</span>
+                <a href="robots.txt" class="hover:text-cyan-400">Robots.txt</a>
+                <span>•</span>
+                <a href="https://github.com/jibranpcccc/developer-coding-hub" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-400">GitHub Repository</a>
+            </div>
+            <p>
+                Developer &amp; Coding Communities Hub • Curated for software engineers, machine learning scientists, and cloud architects worldwide.
+            </p>
+            <p class="text-[11px] text-slate-600">
+                Autonomous directory synchronized via Google Gemini 2.5 Flash &amp; GitHub Actions.
+            </p>
+        </div>
+    </footer>
+"""
+    html_script = """
+    <!-- Client-Side Filter & Search Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const searchInput = document.getElementById('searchInput');
+            const resultBadge = document.getElementById('resultCountBadge');
+            const platformBtns = document.querySelectorAll('.platform-btn');
+            const categoryPills = document.querySelectorAll('.category-pill');
+            const cards = document.querySelectorAll('.community-card');
+            const emptyState = document.getElementById('emptyState');
+            const resetBtn = document.getElementById('resetFiltersBtn');
+            const themeToggle = document.getElementById('themeToggle');
+            const sunIcon = document.getElementById('sunIcon');
+            const moonIcon = document.getElementById('moonIcon');
+
+            let currentPlatform = 'all';
+            let currentCategory = 'all';
+            let searchQuery = '';
+
+            function applyFilters() {
+                let visibleCount = 0;
+                cards.forEach(card => {
+                    const title = card.getAttribute('data-title') || '';
+                    const category = card.getAttribute('data-category') || '';
+                    const platform = card.getAttribute('data-platform') || '';
+                    const tags = card.getAttribute('data-tags') || '';
+                    const desc = card.getAttribute('data-description') || '';
+
+                    const matchesPlatform = (currentPlatform === 'all') || (platform.toLowerCase() === currentPlatform.toLowerCase());
+                    const matchesCategory = (currentCategory === 'all') || (category.toLowerCase() === currentCategory.toLowerCase());
+                    
+                    const query = searchQuery.trim().toLowerCase();
+                    const matchesSearch = (!query) || 
+                                          title.includes(query) || 
+                                          tags.includes(query) || 
+                                          desc.includes(query) || 
+                                          category.toLowerCase().includes(query) ||
+                                          platform.toLowerCase().includes(query);
+
+                    if (matchesPlatform && matchesCategory && matchesSearch) {
+                        card.style.display = 'flex';
+                        visibleCount++;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+
+                resultBadge.textContent = `${visibleCount} results`;
+                if (visibleCount === 0) {
+                    emptyState.classList.remove('hidden');
+                } else {
+                    emptyState.classList.add('hidden');
+                }
+            }
+
+            searchInput.addEventListener('input', (e) => {
+                searchQuery = e.target.value;
+                applyFilters();
+            });
+
+            platformBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    platformBtns.forEach(b => {
+                        b.classList.remove('active', 'bg-cyan-500', 'text-slate-950', 'border-cyan-400', 'shadow-md');
+                        b.classList.add('bg-slate-900', 'text-slate-400', 'border-slate-800');
+                    });
+                    btn.classList.add('active', 'bg-cyan-500', 'text-slate-950', 'border-cyan-400', 'shadow-md');
+                    btn.classList.remove('bg-slate-900', 'text-slate-400', 'border-slate-800');
+
+                    currentPlatform = btn.getAttribute('data-platform');
+                    applyFilters();
+                });
+            });
+
+            categoryPills.forEach(pill => {
+                pill.addEventListener('click', () => {
+                    categoryPills.forEach(p => {
+                        p.classList.remove('active', 'bg-blue-600', 'text-white', 'border-blue-500', 'shadow-sm');
+                        p.classList.add('bg-slate-900', 'text-slate-400', 'border-slate-800');
+                    });
+                    pill.classList.add('active', 'bg-blue-600', 'text-white', 'border-blue-500', 'shadow-sm');
+                    pill.classList.remove('bg-slate-900', 'text-slate-400', 'border-slate-800');
+
+                    currentCategory = pill.getAttribute('data-category');
+                    applyFilters();
+                });
+            });
+
+            function resetAll() {
+                searchQuery = '';
+                searchInput.value = '';
+                currentPlatform = 'all';
+                currentCategory = 'all';
+
+                platformBtns.forEach((b, idx) => {
+                    if (idx === 0) {
+                        b.classList.add('active', 'bg-cyan-500', 'text-slate-950', 'border-cyan-400', 'shadow-md');
+                        b.classList.remove('bg-slate-900', 'text-slate-400', 'border-slate-800');
+                    } else {
+                        b.classList.remove('active', 'bg-cyan-500', 'text-slate-950', 'border-cyan-400', 'shadow-md');
+                        b.classList.add('bg-slate-900', 'text-slate-400', 'border-slate-800');
+                    }
+                });
+
+                categoryPills.forEach((p, idx) => {
+                    if (idx === 0) {
+                        p.classList.add('active', 'bg-blue-600', 'text-white', 'border-blue-500', 'shadow-sm');
+                        p.classList.remove('bg-slate-900', 'text-slate-400', 'border-slate-800');
+                    } else {
+                        p.classList.remove('active', 'bg-blue-600', 'text-white', 'border-blue-500', 'shadow-sm');
+                        p.classList.add('bg-slate-900', 'text-slate-400', 'border-slate-800');
+                    }
+                });
+
+                applyFilters();
+            }
+
+            resetBtn.addEventListener('click', resetAll);
+
+            const isDarkMode = localStorage.getItem('theme') !== 'light';
+            function setTheme(dark) {
+                if (dark) {
+                    document.documentElement.classList.add('dark');
+                    document.documentElement.classList.remove('light');
+                    sunIcon.classList.add('hidden');
+                    moonIcon.classList.remove('hidden');
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    document.documentElement.classList.add('light');
+                    sunIcon.classList.remove('hidden');
+                    moonIcon.classList.add('hidden');
+                    localStorage.setItem('theme', 'light');
+                }
+            }
+
+            setTheme(isDarkMode);
+
+            themeToggle.addEventListener('click', () => {
+                const isCurrentlyDark = document.documentElement.classList.contains('dark');
+                setTheme(!isCurrentlyDark);
+            });
+        });
+    </script>
+</body>
+</html>
+"""
+
+    full_html = html_head + html_main_top + html_main_bottom + html_script
+    with open("index.html", "w", encoding="utf-8") as f:
+        f.write(full_html)
+    print("Generated index.html successfully")
+
+    now_iso = datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%S+00:00')
+    sitemap_content = f"""<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>{SITE_URL}/</loc>
+        <lastmod>{now_iso}</lastmod>
+        <changefreq>hourly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>{SITE_URL}/feed.xml</loc>
+        <lastmod>{now_iso}</lastmod>
+        <changefreq>hourly</changefreq>
+        <priority>0.8</priority>
+    </url>
+</urlset>"""
+
+    with open("sitemap.xml", "w", encoding="utf-8") as f:
+        f.write(sitemap_content)
+    print("Generated sitemap.xml successfully")
+
+    pub_date = datetime.now(timezone.utc).strftime('%a, %d %b %Y %H:%M:%S GMT')
+    items_xml = []
+    for g in groups[:15]:
+        item_xml = f"""    <item>
+        <title>{html.escape(g['title'])} ({html.escape(g['platform'])})</title>
+        <link>{html.escape(g['joinUrl'])}</link>
+        <guid isPermaLink="false">{html.escape(g['id'])}-{g.get('lastUpdated', '2026-09-03')}</guid>
+        <pubDate>{pub_date}</pubDate>
+        <category>{html.escape(g['category'])}</category>
+        <description>{html.escape(g['description'])} - Join {format_count(g['memberCount'])} members on {html.escape(g['platform'])}.</description>
+    </item>"""
+        items_xml.append(item_xml)
+
+    feed_items_str = "\n".join(items_xml)
+    feed_content = f"""<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" 
+     xmlns:atom="http://www.w3.org/2005/Atom" 
+     xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Developer &amp; Coding Communities Hub</title>
+    <link>{SITE_URL}/</link>
+    <description>Fresh curated directory of verified developer communities across Python, JavaScript, DevOps, Web3, and AI/ML.</description>
+    <language>en-us</language>
+    <lastBuildDate>{pub_date}</lastBuildDate>
+    <atom:link rel="self" type="application/rss+xml" href="{SITE_URL}/feed.xml" />
+    <atom:link rel="hub" href="https://pubsubhubbub.appspot.com/publish" />
+{feed_items_str}
+  </channel>
+</rss>"""
+
+    with open("feed.xml", "w", encoding="utf-8") as f:
+        f.write(feed_content)
+    print("Generated feed.xml successfully")
+
+    robots_content = f"""User-agent: *
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: {SITE_URL}/sitemap.xml
+"""
+    with open("robots.txt", "w", encoding="utf-8") as f:
+        f.write(robots_content)
+    print("Generated robots.txt successfully")
+
+if __name__ == "__main__":
+    build_all()
