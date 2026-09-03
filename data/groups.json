@@ -603,5 +603,42 @@
     "verified": true,
     "featured": false,
     "lastUpdated": "2026-09-03"
+  },
+  {
+    "id": "system-design-fight-club-tg",
+    "title": "System Design & High Scale Architecture",
+    "category": "DevOps & Cloud",
+    "platform": "Telegram",
+    "memberCount": 46000,
+    "description": "Deep-dive case studies dissecting Uber, Netflix, and Stripe architectures, distributed consensus, caching, and rate limiters.",
+    "joinUrl": "https://t.me/systemdesign_fightclub",
+    "tags": [
+      "system-design",
+      "architecture",
+      "distributed-systems",
+      "scalability"
+    ],
+    "verified": true,
+    "featured": false,
+    "lastUpdated": "2026-09-03"
+  },
+  {
+    "id": "solana-developers-discord",
+    "title": "Solana Tech Builders Collective",
+    "category": "Web3 & Blockchain",
+    "platform": "Discord",
+    "memberCount": 61000,
+    "description": "Premier hub for Anchor framework developers, Solana VM smart contract auditing, high TPS dApp development, and grants.",
+    "joinUrl": "https://discord.gg/solanadev",
+    "tags": [
+      "solana",
+      "anchor",
+      "rust",
+      "smart-contracts",
+      "web3"
+    ],
+    "verified": true,
+    "featured": false,
+    "lastUpdated": "2026-09-03"
   }
 ]
