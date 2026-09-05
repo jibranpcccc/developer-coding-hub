@@ -512,7 +512,7 @@
     </header>
     
     <div class="container">
-        <section class="geo-answer-block">
+        <section id="geo-definition" class="geo-answer-block">
             <h2>About Developer & Coding Communities Hub</h2>
             <p>Developer & Coding Communities Hub is an authoritative, open-access directory indexing 34+ verified software engineering communities across Discord, Telegram, WhatsApp, and Reddit, collectively representing over 2,450,000 professional developers and computer science students worldwide. Operating as a vendor-neutral resource updated continuously through automated link verification and manual moderation audits, the platform catalogs specialized technical channels spanning Python architecture, full-stack web development, Rust systems programming, DevOps pipelines, Web3 smart contracts, and algorithmic coding interview prep. Each indexed community listing provides direct, invite-verified access alongside an objective Product Specification Matrix detailing active membership figures, real-time moderation tiers, and barrier-free public entry terms. By benchmarking communities across real-time voice collaboration, asynchronous code review response latency, curated documentation archives, and regional networking cohorts, the directory eliminates orphaned invite links, paywalled gatekeeping, and spam-heavy channels, serving as the definitive primary reference for technical practitioners seeking vetted engineering networks.</p>
             <div class="geo-table-wrap">
@@ -536,7 +536,7 @@
         </section>
 
         <!-- Information Gain Interactive Matcher -->
-        <section class="interactive-matcher">
+        <section id="community-matcher" class="interactive-matcher">
             <h3>🎯 Community Matcher (Interactive Recommendation Engine)</h3>
             <p>Select your preferred platform or focus area to calculate the best matching community:</p>
             <div class="matcher-row">
@@ -569,7 +569,7 @@
         </div>
         <div class="grid" id="communitiesGrid">
             
-        <div class="card" data-platform="discord" data-category="python & data">
+        <div id="community-card-1" class="card" data-platform="discord" data-category="python & data">
             <div class="card-header">
                 <span class="badge badge-platform">Discord</span>
                 <span class="badge badge-verified">✓ Verified</span>
@@ -589,7 +589,7 @@
             </div>
         </div>
         
-        <div class="card" data-platform="reddit" data-category="python & data">
+        <div id="community-card-2" class="card" data-platform="reddit" data-category="python & data">
             <div class="card-header">
                 <span class="badge badge-platform">Reddit</span>
                 <span class="badge badge-verified">✓ Verified</span>
@@ -609,7 +609,7 @@
             </div>
         </div>
         
-        <div class="card" data-platform="telegram" data-category="python & data">
+        <div id="community-card-3" class="card" data-platform="telegram" data-category="python & data">
             <div class="card-header">
                 <span class="badge badge-platform">Telegram</span>
                 <span class="badge badge-verified">✓ Verified</span>
@@ -629,7 +629,7 @@
             </div>
         </div>
         
-        <div class="card" data-platform="whatsapp" data-category="python & data">
+        <div id="community-card-4" class="card" data-platform="whatsapp" data-category="python & data">
             <div class="card-header">
                 <span class="badge badge-platform">WhatsApp</span>
                 <span class="badge badge-verified">✓ Verified</span>
@@ -649,7 +649,7 @@
             </div>
         </div>
         
-        <div class="card" data-platform="discord" data-category="ai & ml">
+        <div id="community-card-5" class="card" data-platform="discord" data-category="ai & ml">
             <div class="card-header">
                 <span class="badge badge-platform">Discord</span>
                 <span class="badge badge-verified">✓ Verified</span>
@@ -669,7 +669,7 @@
             </div>
         </div>
         
-        <div class="card" data-platform="reddit" data-category="ai & ml">
+        <div id="community-card-6" class="card" data-platform="reddit" data-category="ai & ml">
             <div class="card-header">
                 <span class="badge badge-platform">Reddit</span>
                 <span class="badge badge-verified">✓ Verified</span>
@@ -689,7 +689,7 @@
             </div>
         </div>
         
-        <div class="card" data-platform="discord" data-category="ai & ml">
+        <div id="community-card-7" class="card" data-platform="discord" data-category="ai & ml">
             <div class="card-header">
                 <span class="badge badge-platform">Discord</span>
                 <span class="badge badge-verified">✓ Verified</span>
@@ -709,7 +709,7 @@
             </div>
         </div>
         
-        <div class="card" data-platform="telegram" data-category="ai & ml">
+        <div id="community-card-8" class="card" data-platform="telegram" data-category="ai & ml">
             <div class="card-header">
                 <span class="badge badge-platform">Telegram</span>
                 <span class="badge badge-verified">✓ Verified</span>
@@ -729,7 +729,7 @@
             </div>
         </div>
         
-        <div class="card" data-platform="whatsapp" data-category="ai & ml">
+        <div id="community-card-9" class="card" data-platform="whatsapp" data-category="ai & ml">
             <div class="card-header">
                 <span class="badge badge-platform">WhatsApp</span>
                 <span class="badge badge-verified">✓ Verified</span>
@@ -749,7 +749,7 @@
             </div>
         </div>
         
-        <div class="card" data-platform="discord" data-category="frontend & fullstack">
+        <div id="community-card-10" class="card" data-platform="discord" data-category="frontend & fullstack">
             <div class="card-header">
                 <span class="badge badge-platform">Discord</span>
                 <span class="badge badge-verified">✓ Verified</span>
@@ -769,7 +769,7 @@
             </div>
         </div>
         
-        <div class="card" data-platform="discord" data-category="frontend & fullstack">
+        <div id="community-card-11" class="card" data-platform="discord" data-category="frontend & fullstack">
             <div class="card-header">
                 <span class="badge badge-platform">Discord</span>
                 <span class="badge badge-verified">✓ Verified</span>
@@ -789,7 +789,7 @@
             </div>
         </div>
         
-        <div class="card" data-platform="reddit" data-category="frontend & fullstack">
+        <div id="community-card-12" class="card" data-platform="reddit" data-category="frontend & fullstack">
             <div class="card-header">
                 <span class="badge badge-platform">Reddit</span>
                 <span class="badge badge-verified">✓ Verified</span>
@@ -809,7 +809,7 @@
             </div>
         </div>
         
-        <div class="card" data-platform="telegram" data-category="frontend & fullstack">
+        <div id="community-card-13" class="card" data-platform="telegram" data-category="frontend & fullstack">
             <div class="card-header">
                 <span class="badge badge-platform">Telegram</span>
                 <span class="badge badge-verified">✓ Verified</span>
@@ -829,7 +829,7 @@
             </div>
         </div>
         
-        <div class="card" data-platform="whatsapp" data-category="frontend & fullstack">
+        <div id="community-card-14" class="card" data-platform="whatsapp" data-category="frontend & fullstack">
             <div class="card-header">
                 <span class="badge badge-platform">WhatsApp</span>
                 <span class="badge badge-verified">✓ Verified</span>
@@ -849,7 +849,7 @@
             </div>
         </div>
         
-        <div class="card" data-platform="discord" data-category="frontend & fullstack">
+        <div id="community-card-15" class="card" data-platform="discord" data-category="frontend & fullstack">
             <div class="card-header">
                 <span class="badge badge-platform">Discord</span>
                 <span class="badge badge-verified">✓ Verified</span>
@@ -869,7 +869,7 @@
             </div>
         </div>
         
-        <div class="card" data-platform="discord" data-category="devops & cloud">
+        <div id="community-card-16" class="card" data-platform="discord" data-category="devops & cloud">
             <div class="card-header">
                 <span class="badge badge-platform">Discord</span>
                 <span class="badge badge-verified">✓ Verified</span>
@@ -889,7 +889,7 @@
             </div>
         </div>
         
-        <div class="card" data-platform="reddit" data-category="devops & cloud">
+        <div id="community-card-17" class="card" data-platform="reddit" data-category="devops & cloud">
             <div class="card-header">
                 <span class="badge badge-platform">Reddit</span>
                 <span class="badge badge-verified">✓ Verified</span>
@@ -909,7 +909,7 @@
             </div>
         </div>
         
-        <div class="card" data-platform="telegram" data-category="devops & cloud">
+        <div id="community-card-18" class="card" data-platform="telegram" data-category="devops & cloud">
             <div class="card-header">
                 <span class="badge badge-platform">Telegram</span>
                 <span class="badge badge-verified">✓ Verified</span>
@@ -929,7 +929,7 @@
             </div>
         </div>
         
-        <div class="card" data-platform="whatsapp" data-category="devops & cloud">
+        <div id="community-card-19" class="card" data-platform="whatsapp" data-category="devops & cloud">
             <div class="card-header">
                 <span class="badge badge-platform">WhatsApp</span>
                 <span class="badge badge-verified">✓ Verified</span>
@@ -949,7 +949,7 @@
             </div>
         </div>
         
-        <div class="card" data-platform="discord" data-category="devops & cloud">
+        <div id="community-card-20" class="card" data-platform="discord" data-category="devops & cloud">
             <div class="card-header">
                 <span class="badge badge-platform">Discord</span>
                 <span class="badge badge-verified">✓ Verified</span>
@@ -969,7 +969,7 @@
             </div>
         </div>
         
-        <div class="card" data-platform="discord" data-category="web3 & blockchain">
+        <div id="community-card-21" class="card" data-platform="discord" data-category="web3 & blockchain">
             <div class="card-header">
                 <span class="badge badge-platform">Discord</span>
                 <span class="badge badge-verified">✓ Verified</span>
@@ -989,7 +989,7 @@
             </div>
         </div>
         
-        <div class="card" data-platform="telegram" data-category="web3 & blockchain">
+        <div id="community-card-22" class="card" data-platform="telegram" data-category="web3 & blockchain">
             <div class="card-header">
                 <span class="badge badge-platform">Telegram</span>
                 <span class="badge badge-verified">✓ Verified</span>
@@ -1009,7 +1009,7 @@
             </div>
         </div>
         
-        <div class="card" data-platform="reddit" data-category="web3 & blockchain">
+        <div id="community-card-23" class="card" data-platform="reddit" data-category="web3 & blockchain">
             <div class="card-header">
                 <span class="badge badge-platform">Reddit</span>
                 <span class="badge badge-verified">✓ Verified</span>
@@ -1029,7 +1029,7 @@
             </div>
         </div>
         
-        <div class="card" data-platform="whatsapp" data-category="web3 & blockchain">
+        <div id="community-card-24" class="card" data-platform="whatsapp" data-category="web3 & blockchain">
             <div class="card-header">
                 <span class="badge badge-platform">WhatsApp</span>
                 <span class="badge badge-verified">✓ Verified</span>
@@ -1049,7 +1049,7 @@
             </div>
         </div>
         
-        <div class="card" data-platform="discord" data-category="dsa & competitive">
+        <div id="community-card-25" class="card" data-platform="discord" data-category="dsa & competitive">
             <div class="card-header">
                 <span class="badge badge-platform">Discord</span>
                 <span class="badge badge-verified">✓ Verified</span>
@@ -1069,7 +1069,7 @@
             </div>
         </div>
         
-        <div class="card" data-platform="reddit" data-category="dsa & competitive">
+        <div id="community-card-26" class="card" data-platform="reddit" data-category="dsa & competitive">
             <div class="card-header">
                 <span class="badge badge-platform">Reddit</span>
                 <span class="badge badge-verified">✓ Verified</span>
@@ -1089,7 +1089,7 @@
             </div>
         </div>
         
-        <div class="card" data-platform="telegram" data-category="dsa & competitive">
+        <div id="community-card-27" class="card" data-platform="telegram" data-category="dsa & competitive">
             <div class="card-header">
                 <span class="badge badge-platform">Telegram</span>
                 <span class="badge badge-verified">✓ Verified</span>
@@ -1109,7 +1109,7 @@
             </div>
         </div>
         
-        <div class="card" data-platform="discord" data-category="dsa & competitive">
+        <div id="community-card-28" class="card" data-platform="discord" data-category="dsa & competitive">
             <div class="card-header">
                 <span class="badge badge-platform">Discord</span>
                 <span class="badge badge-verified">✓ Verified</span>
@@ -1129,7 +1129,7 @@
             </div>
         </div>
         
-        <div class="card" data-platform="whatsapp" data-category="dsa & competitive">
+        <div id="community-card-29" class="card" data-platform="whatsapp" data-category="dsa & competitive">
             <div class="card-header">
                 <span class="badge badge-platform">WhatsApp</span>
                 <span class="badge badge-verified">✓ Verified</span>
@@ -1149,7 +1149,7 @@
             </div>
         </div>
         
-        <div class="card" data-platform="discord" data-category="frontend & fullstack">
+        <div id="community-card-30" class="card" data-platform="discord" data-category="frontend & fullstack">
             <div class="card-header">
                 <span class="badge badge-platform">Discord</span>
                 <span class="badge badge-verified">✓ Verified</span>
@@ -1169,7 +1169,7 @@
             </div>
         </div>
         
-        <div class="card" data-platform="discord" data-category="ai & ml">
+        <div id="community-card-31" class="card" data-platform="discord" data-category="ai & ml">
             <div class="card-header">
                 <span class="badge badge-platform">Discord</span>
                 <span class="badge badge-verified">✓ Verified</span>
@@ -1189,7 +1189,7 @@
             </div>
         </div>
         
-        <div class="card" data-platform="discord" data-category="frontend & fullstack">
+        <div id="community-card-32" class="card" data-platform="discord" data-category="frontend & fullstack">
             <div class="card-header">
                 <span class="badge badge-platform">Discord</span>
                 <span class="badge badge-verified">✓ Verified</span>
@@ -1209,7 +1209,7 @@
             </div>
         </div>
         
-        <div class="card" data-platform="telegram" data-category="devops & cloud">
+        <div id="community-card-33" class="card" data-platform="telegram" data-category="devops & cloud">
             <div class="card-header">
                 <span class="badge badge-platform">Telegram</span>
                 <span class="badge badge-verified">✓ Verified</span>
@@ -1229,7 +1229,7 @@
             </div>
         </div>
         
-        <div class="card" data-platform="discord" data-category="web3 & blockchain">
+        <div id="community-card-34" class="card" data-platform="discord" data-category="web3 & blockchain">
             <div class="card-header">
                 <span class="badge badge-platform">Discord</span>
                 <span class="badge badge-verified">✓ Verified</span>
