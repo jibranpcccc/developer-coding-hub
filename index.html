@@ -397,7 +397,7 @@
         .search-box input { width: 100%; padding: 14px 20px; border-radius: 6px; border: 1px solid var(--border); background: var(--surface); color: #fff; font-size: 1rem; outline: none; font-family: var(--code-font); }
         .search-box input:focus { border-color: var(--accent); box-shadow: 0 0 15px rgba(56,189,248,0.25); }
         .filters { display: flex; gap: 8px; flex-wrap: wrap; }
-        .filter-btn { padding: 9px 18px; border-radius: 6px; background: var(--surface); border: 1px solid var(--border); color: var(--muted); cursor: pointer; font-size: 0.88rem; font-weight: 600; font-family: var(--code-font); transition: all 0.2s; }
+        .filter-btn { padding: 9px 18px; border-radius: 6px; background: var(--surface); border: 1px solid var(--border); color: var(--muted); cursor: pointer; font-size: 0.88rem; font-weight: 600; font-family: var(--code-font); transition: all 0.2s; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
         .filter-btn.active, .filter-btn:hover { background: #1f6feb; color: #fff; border-color: #1f6feb; }
 
         /* Code Editor Card */
@@ -410,7 +410,7 @@
             padding: 24px;
             display: flex;
             flex-direction: column;
-            transition: all 0.25s;
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
             position: relative;
         }
         .card:hover { transform: translateY(-4px); border-color: var(--accent); box-shadow: 0 12px 30px rgba(0,0,0,0.5), 0 0 15px rgba(56,189,248,0.2); }
@@ -428,16 +428,16 @@
 
         .tags-row { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 20px; }
         .tag { font-size: 0.72rem; color: var(--accent); background: rgba(56,189,248,0.1); padding: 3px 8px; border-radius: 4px; font-family: var(--code-font); }
-        .card-footer { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; border-top: 1px solid var(--border); padding-top: 16px; }
+        .card-footer { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; border-top: 1px solid var(--border); padding-top: 16px; }
         .activity-pulse { font-size: 0.82rem; color: #10b981; display: flex; align-items: center; gap: 6px; font-weight: 600; font-family: var(--code-font); }
         .pulse-dot { width: 8px; height: 8px; border-radius: 50%; background: #10b981; box-shadow: 0 0 10px #10b981; }
 
-        .card-actions { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
-        .btn-copy-invite { background: rgba(255,255,255,0.06); color: var(--muted); border: 1px solid var(--border); padding: 8px 14px; border-radius: 4px; font-size: 0.82rem; font-weight: 600; font-family: var(--code-font); cursor: pointer; transition: all 0.2s; }
+        .card-actions { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+        .btn-copy-invite { background: rgba(255,255,255,0.06); color: var(--muted); border: 1px solid var(--border); padding: 9px 16px; border-radius: 6px; font-size: 0.82rem; font-weight: 600; font-family: var(--code-font); cursor: pointer; transition: all 0.2s; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; gap: 6px; }
         .btn-copy-invite:hover { background: rgba(255,255,255,0.14); color: #fff; }
         .btn-copy-invite.copied { background: rgba(16, 185, 129, 0.2); color: #10b981; border-color: #10b981; }
-        .btn-join { display: inline-block; background: #1f6feb; color: #fff; text-decoration: none; padding: 8px 18px; border-radius: 4px; font-size: 0.85rem; font-weight: 700; font-family: var(--code-font); transition: background 0.2s; }
-        .btn-join:hover { background: #388bfd; }
+        .btn-join { display: inline-flex; align-items: center; justify-content: center; background: #1f6feb; color: #fff; text-decoration: none; padding: 9px 18px; border-radius: 6px; font-size: 0.85rem; font-weight: 700; font-family: var(--code-font); transition: background 0.2s, transform 0.2s; min-height: 44px; }
+        .btn-join:hover { background: #388bfd; transform: translateY(-1px); }
 
         footer { border-top: 1px solid var(--border); margin-top: 65px; padding: 50px 20px 30px; font-family: var(--code-font); }
         .footer-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 30px; text-align: left; }
@@ -447,10 +447,27 @@
         .footer-desc { color: var(--muted); font-size: 0.84rem; line-height: 1.6; max-width: 380px; }
         .footer-bottom { text-align: center; color: var(--muted); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 40px; padding-top: 25px; }
 
-        .mobile-dock { display: none; position: fixed; bottom: 0; left: 0; right: 0; background: rgba(13, 17, 23, 0.95); backdrop-filter: blur(14px); border-top: 1px solid var(--border); padding: 10px 14px; z-index: 9999; gap: 8px; font-family: var(--code-font); }
-        @media (max-width: 768px) { .mobile-dock { display: flex; } body { padding-bottom: 90px; } .footer-grid { grid-template-columns: 1fr; } .nav-menu { display: none; } }
-        .dock-btn { flex: 1; padding: 10px; border-radius: 4px; background: var(--surface); border: 1px solid var(--border); color: #fff; font-weight: 600; font-size: 0.82rem; cursor: pointer; text-align: center; font-family: var(--code-font); }
+        .mobile-dock { display: none; position: fixed; bottom: 0; left: 0; right: 0; background: rgba(13, 17, 23, 0.95); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-top: 1px solid var(--border); padding: 10px 14px; padding-bottom: max(10px, env(safe-area-inset-bottom)); z-index: 9999; gap: 8px; font-family: var(--code-font); }
+        .dock-btn { flex: 1; padding: 10px; border-radius: 6px; background: var(--surface); border: 1px solid var(--border); color: #fff; font-weight: 600; font-size: 0.82rem; cursor: pointer; text-align: center; font-family: var(--code-font); min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
         .dock-btn-accent { background: #1f6feb; color: #fff; border-color: #1f6feb; font-weight: 700; }
+
+        @media (max-width: 768px) {
+            .mobile-dock { display: flex; }
+            body { padding-bottom: 90px; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .nav-menu { display: none; }
+            .grid { grid-template-columns: 1fr; }
+            .nav-brand { font-size: 1.05rem; }
+            header { padding: 35px 16px 20px; }
+            h1 { font-size: 2.1rem; }
+        }
+        @media (max-width: 480px) {
+            h1 { font-size: 1.75rem; }
+            .container { padding: 16px 12px; }
+            .card { padding: 18px 14px; }
+            .card-actions { width: 100%; flex-direction: column; align-items: stretch; }
+            .btn-copy-invite, .btn-join { width: 100%; }
+        }
     </style>
     
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
@@ -565,7 +582,7 @@
                 <span class="activity-pulse"><span class="pulse-dot"></span> Live Channel</span>
                 <div class="card-actions">
                     <button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://discord.gg/python')">📋 Copy Invite Link</button>
-                    <div class="card-actions"><button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://discord.gg/python')">📋 Copy Invite</button><div class="card-actions"><button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://discord.gg/python')">📋 Copy Invite</button><a href="https://discord.gg/python" target="_blank" rel="noopener noreferrer" class="btn-join">Join Community →</a></div></div>
+                    <a href="https://discord.gg/python" target="_blank" rel="noopener noreferrer" class="btn-join">Join Community →</a>
                 </div>
             </div>
         </div>
@@ -588,7 +605,7 @@
                 <span class="activity-pulse"><span class="pulse-dot"></span> Live Channel</span>
                 <div class="card-actions">
                     <button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://www.reddit.com/r/Python/')">📋 Copy Invite Link</button>
-                    <div class="card-actions"><button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://www.reddit.com/r/Python/')">📋 Copy Invite</button><div class="card-actions"><button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://www.reddit.com/r/Python/')">📋 Copy Invite</button><a href="https://www.reddit.com/r/Python/" target="_blank" rel="noopener noreferrer" class="btn-join">Join Community →</a></div></div>
+                    <a href="https://www.reddit.com/r/Python/" target="_blank" rel="noopener noreferrer" class="btn-join">Join Community →</a>
                 </div>
             </div>
         </div>
@@ -611,7 +628,7 @@
                 <span class="activity-pulse"><span class="pulse-dot"></span> Live Channel</span>
                 <div class="card-actions">
                     <button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://t.me/PythonDevelopersGlobal')">📋 Copy Invite Link</button>
-                    <div class="card-actions"><button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://t.me/PythonDevelopersGlobal')">📋 Copy Invite</button><div class="card-actions"><button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://t.me/PythonDevelopersGlobal')">📋 Copy Invite</button><a href="https://t.me/PythonDevelopersGlobal" target="_blank" rel="noopener noreferrer" class="btn-join">Join Community →</a></div></div>
+                    <a href="https://t.me/PythonDevelopersGlobal" target="_blank" rel="noopener noreferrer" class="btn-join">Join Community →</a>
                 </div>
             </div>
         </div>
@@ -634,7 +651,7 @@
                 <span class="activity-pulse"><span class="pulse-dot"></span> Live Channel</span>
                 <div class="card-actions">
                     <button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://chat.whatsapp.com/invite/python-data-ninjas')">📋 Copy Invite Link</button>
-                    <div class="card-actions"><button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://chat.whatsapp.com/invite/python-data-ninjas')">📋 Copy Invite</button><div class="card-actions"><button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://chat.whatsapp.com/invite/python-data-ninjas')">📋 Copy Invite</button><a href="https://chat.whatsapp.com/invite/python-data-ninjas" target="_blank" rel="noopener noreferrer" class="btn-join">Join Community →</a></div></div>
+                    <a href="https://chat.whatsapp.com/invite/python-data-ninjas" target="_blank" rel="noopener noreferrer" class="btn-join">Join Community →</a>
                 </div>
             </div>
         </div>
@@ -657,7 +674,7 @@
                 <span class="activity-pulse"><span class="pulse-dot"></span> Live Channel</span>
                 <div class="card-actions">
                     <button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://discord.gg/huggingface')">📋 Copy Invite Link</button>
-                    <div class="card-actions"><button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://discord.gg/huggingface')">📋 Copy Invite</button><div class="card-actions"><button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://discord.gg/huggingface')">📋 Copy Invite</button><a href="https://discord.gg/huggingface" target="_blank" rel="noopener noreferrer" class="btn-join">Join Community →</a></div></div>
+                    <a href="https://discord.gg/huggingface" target="_blank" rel="noopener noreferrer" class="btn-join">Join Community →</a>
                 </div>
             </div>
         </div>
@@ -680,7 +697,7 @@
                 <span class="activity-pulse"><span class="pulse-dot"></span> Live Channel</span>
                 <div class="card-actions">
                     <button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://www.reddit.com/r/MachineLearning/')">📋 Copy Invite Link</button>
-                    <div class="card-actions"><button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://www.reddit.com/r/MachineLearning/')">📋 Copy Invite</button><div class="card-actions"><button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://www.reddit.com/r/MachineLearning/')">📋 Copy Invite</button><a href="https://www.reddit.com/r/MachineLearning/" target="_blank" rel="noopener noreferrer" class="btn-join">Join Community →</a></div></div>
+                    <a href="https://www.reddit.com/r/MachineLearning/" target="_blank" rel="noopener noreferrer" class="btn-join">Join Community →</a>
                 </div>
             </div>
         </div>
@@ -703,7 +720,7 @@
                 <span class="activity-pulse"><span class="pulse-dot"></span> Live Channel</span>
                 <div class="card-actions">
                     <button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://discord.gg/pytorch')">📋 Copy Invite Link</button>
-                    <div class="card-actions"><button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://discord.gg/pytorch')">📋 Copy Invite</button><div class="card-actions"><button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://discord.gg/pytorch')">📋 Copy Invite</button><a href="https://discord.gg/pytorch" target="_blank" rel="noopener noreferrer" class="btn-join">Join Community →</a></div></div>
+                    <a href="https://discord.gg/pytorch" target="_blank" rel="noopener noreferrer" class="btn-join">Join Community →</a>
                 </div>
             </div>
         </div>
@@ -726,7 +743,7 @@
                 <span class="activity-pulse"><span class="pulse-dot"></span> Live Channel</span>
                 <div class="card-actions">
                     <button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://t.me/deeplearning_ai_community')">📋 Copy Invite Link</button>
-                    <div class="card-actions"><button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://t.me/deeplearning_ai_community')">📋 Copy Invite</button><div class="card-actions"><button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://t.me/deeplearning_ai_community')">📋 Copy Invite</button><a href="https://t.me/deeplearning_ai_community" target="_blank" rel="noopener noreferrer" class="btn-join">Join Community →</a></div></div>
+                    <a href="https://t.me/deeplearning_ai_community" target="_blank" rel="noopener noreferrer" class="btn-join">Join Community →</a>
                 </div>
             </div>
         </div>
@@ -749,7 +766,7 @@
                 <span class="activity-pulse"><span class="pulse-dot"></span> Live Channel</span>
                 <div class="card-actions">
                     <button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://chat.whatsapp.com/invite/generative-ai-eng')">📋 Copy Invite Link</button>
-                    <div class="card-actions"><button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://chat.whatsapp.com/invite/generative-ai-eng')">📋 Copy Invite</button><div class="card-actions"><button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://chat.whatsapp.com/invite/generative-ai-eng')">📋 Copy Invite</button><a href="https://chat.whatsapp.com/invite/generative-ai-eng" target="_blank" rel="noopener noreferrer" class="btn-join">Join Community →</a></div></div>
+                    <a href="https://chat.whatsapp.com/invite/generative-ai-eng" target="_blank" rel="noopener noreferrer" class="btn-join">Join Community →</a>
                 </div>
             </div>
         </div>
@@ -772,7 +789,7 @@
                 <span class="activity-pulse"><span class="pulse-dot"></span> Live Channel</span>
                 <div class="card-actions">
                     <button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://discord.gg/theodinproject')">📋 Copy Invite Link</button>
-                    <div class="card-actions"><button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://discord.gg/theodinproject')">📋 Copy Invite</button><div class="card-actions"><button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://discord.gg/theodinproject')">📋 Copy Invite</button><a href="https://discord.gg/theodinproject" target="_blank" rel="noopener noreferrer" class="btn-join">Join Community →</a></div></div>
+                    <a href="https://discord.gg/theodinproject" target="_blank" rel="noopener noreferrer" class="btn-join">Join Community →</a>
                 </div>
             </div>
         </div>
@@ -795,7 +812,7 @@
                 <span class="activity-pulse"><span class="pulse-dot"></span> Live Channel</span>
                 <div class="card-actions">
                     <button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://discord.gg/reactiflux')">📋 Copy Invite Link</button>
-                    <div class="card-actions"><button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://discord.gg/reactiflux')">📋 Copy Invite</button><div class="card-actions"><button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://discord.gg/reactiflux')">📋 Copy Invite</button><a href="https://discord.gg/reactiflux" target="_blank" rel="noopener noreferrer" class="btn-join">Join Community →</a></div></div>
+                    <a href="https://discord.gg/reactiflux" target="_blank" rel="noopener noreferrer" class="btn-join">Join Community →</a>
                 </div>
             </div>
         </div>
@@ -818,7 +835,7 @@
                 <span class="activity-pulse"><span class="pulse-dot"></span> Live Channel</span>
                 <div class="card-actions">
                     <button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://www.reddit.com/r/webdev/')">📋 Copy Invite Link</button>
-                    <div class="card-actions"><button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://www.reddit.com/r/webdev/')">📋 Copy Invite</button><div class="card-actions"><button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://www.reddit.com/r/webdev/')">📋 Copy Invite</button><a href="https://www.reddit.com/r/webdev/" target="_blank" rel="noopener noreferrer" class="btn-join">Join Community →</a></div></div>
+                    <a href="https://www.reddit.com/r/webdev/" target="_blank" rel="noopener noreferrer" class="btn-join">Join Community →</a>
                 </div>
             </div>
         </div>
@@ -841,7 +858,7 @@
                 <span class="activity-pulse"><span class="pulse-dot"></span> Live Channel</span>
                 <div class="card-actions">
                     <button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://t.me/react_devs_group')">📋 Copy Invite Link</button>
-                    <div class="card-actions"><button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://t.me/react_devs_group')">📋 Copy Invite</button><div class="card-actions"><button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://t.me/react_devs_group')">📋 Copy Invite</button><a href="https://t.me/react_devs_group" target="_blank" rel="noopener noreferrer" class="btn-join">Join Community →</a></div></div>
+                    <a href="https://t.me/react_devs_group" target="_blank" rel="noopener noreferrer" class="btn-join">Join Community →</a>
                 </div>
             </div>
         </div>
@@ -864,7 +881,7 @@
                 <span class="activity-pulse"><span class="pulse-dot"></span> Live Channel</span>
                 <div class="card-actions">
                     <button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://chat.whatsapp.com/invite/fullstack-masters')">📋 Copy Invite Link</button>
-                    <div class="card-actions"><button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://chat.whatsapp.com/invite/fullstack-masters')">📋 Copy Invite</button><div class="card-actions"><button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://chat.whatsapp.com/invite/fullstack-masters')">📋 Copy Invite</button><a href="https://chat.whatsapp.com/invite/fullstack-masters" target="_blank" rel="noopener noreferrer" class="btn-join">Join Community →</a></div></div>
+                    <a href="https://chat.whatsapp.com/invite/fullstack-masters" target="_blank" rel="noopener noreferrer" class="btn-join">Join Community →</a>
                 </div>
             </div>
         </div>
@@ -887,7 +904,7 @@
                 <span class="activity-pulse"><span class="pulse-dot"></span> Live Channel</span>
                 <div class="card-actions">
                     <button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://discord.gg/typescript')">📋 Copy Invite Link</button>
-                    <div class="card-actions"><button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://discord.gg/typescript')">📋 Copy Invite</button><div class="card-actions"><button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://discord.gg/typescript')">📋 Copy Invite</button><a href="https://discord.gg/typescript" target="_blank" rel="noopener noreferrer" class="btn-join">Join Community →</a></div></div>
+                    <a href="https://discord.gg/typescript" target="_blank" rel="noopener noreferrer" class="btn-join">Join Community →</a>
                 </div>
             </div>
         </div>
@@ -910,7 +927,7 @@
                 <span class="activity-pulse"><span class="pulse-dot"></span> Live Channel</span>
                 <div class="card-actions">
                     <button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://communityinviter.com/apps/cloud-native/cncf')">📋 Copy Invite Link</button>
-                    <div class="card-actions"><button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://communityinviter.com/apps/cloud-native/cncf')">📋 Copy Invite</button><div class="card-actions"><button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://communityinviter.com/apps/cloud-native/cncf')">📋 Copy Invite</button><a href="https://communityinviter.com/apps/cloud-native/cncf" target="_blank" rel="noopener noreferrer" class="btn-join">Join Community →</a></div></div>
+                    <a href="https://communityinviter.com/apps/cloud-native/cncf" target="_blank" rel="noopener noreferrer" class="btn-join">Join Community →</a>
                 </div>
             </div>
         </div>
@@ -933,7 +950,7 @@
                 <span class="activity-pulse"><span class="pulse-dot"></span> Live Channel</span>
                 <div class="card-actions">
                     <button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://www.reddit.com/r/devops/')">📋 Copy Invite Link</button>
-                    <div class="card-actions"><button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://www.reddit.com/r/devops/')">📋 Copy Invite</button><div class="card-actions"><button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://www.reddit.com/r/devops/')">📋 Copy Invite</button><a href="https://www.reddit.com/r/devops/" target="_blank" rel="noopener noreferrer" class="btn-join">Join Community →</a></div></div>
+                    <a href="https://www.reddit.com/r/devops/" target="_blank" rel="noopener noreferrer" class="btn-join">Join Community →</a>
                 </div>
             </div>
         </div>
@@ -956,7 +973,7 @@
                 <span class="activity-pulse"><span class="pulse-dot"></span> Live Channel</span>
                 <div class="card-actions">
                     <button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://t.me/devops_engineers_channel')">📋 Copy Invite Link</button>
-                    <div class="card-actions"><button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://t.me/devops_engineers_channel')">📋 Copy Invite</button><div class="card-actions"><button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://t.me/devops_engineers_channel')">📋 Copy Invite</button><a href="https://t.me/devops_engineers_channel" target="_blank" rel="noopener noreferrer" class="btn-join">Join Community →</a></div></div>
+                    <a href="https://t.me/devops_engineers_channel" target="_blank" rel="noopener noreferrer" class="btn-join">Join Community →</a>
                 </div>
             </div>
         </div>
@@ -979,7 +996,7 @@
                 <span class="activity-pulse"><span class="pulse-dot"></span> Live Channel</span>
                 <div class="card-actions">
                     <button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://chat.whatsapp.com/invite/k8s-cloud-ops')">📋 Copy Invite Link</button>
-                    <div class="card-actions"><button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://chat.whatsapp.com/invite/k8s-cloud-ops')">📋 Copy Invite</button><div class="card-actions"><button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://chat.whatsapp.com/invite/k8s-cloud-ops')">📋 Copy Invite</button><a href="https://chat.whatsapp.com/invite/k8s-cloud-ops" target="_blank" rel="noopener noreferrer" class="btn-join">Join Community →</a></div></div>
+                    <a href="https://chat.whatsapp.com/invite/k8s-cloud-ops" target="_blank" rel="noopener noreferrer" class="btn-join">Join Community →</a>
                 </div>
             </div>
         </div>
@@ -1002,7 +1019,7 @@
                 <span class="activity-pulse"><span class="pulse-dot"></span> Live Channel</span>
                 <div class="card-actions">
                     <button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://discord.gg/hashicorp')">📋 Copy Invite Link</button>
-                    <div class="card-actions"><button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://discord.gg/hashicorp')">📋 Copy Invite</button><div class="card-actions"><button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://discord.gg/hashicorp')">📋 Copy Invite</button><a href="https://discord.gg/hashicorp" target="_blank" rel="noopener noreferrer" class="btn-join">Join Community →</a></div></div>
+                    <a href="https://discord.gg/hashicorp" target="_blank" rel="noopener noreferrer" class="btn-join">Join Community →</a>
                 </div>
             </div>
         </div>
@@ -1025,7 +1042,7 @@
                 <span class="activity-pulse"><span class="pulse-dot"></span> Live Channel</span>
                 <div class="card-actions">
                     <button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://discord.gg/devdao')">📋 Copy Invite Link</button>
-                    <div class="card-actions"><button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://discord.gg/devdao')">📋 Copy Invite</button><div class="card-actions"><button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://discord.gg/devdao')">📋 Copy Invite</button><a href="https://discord.gg/devdao" target="_blank" rel="noopener noreferrer" class="btn-join">Join Community →</a></div></div>
+                    <a href="https://discord.gg/devdao" target="_blank" rel="noopener noreferrer" class="btn-join">Join Community →</a>
                 </div>
             </div>
         </div>
@@ -1048,7 +1065,7 @@
                 <span class="activity-pulse"><span class="pulse-dot"></span> Live Channel</span>
                 <div class="card-actions">
                     <button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://t.me/eth_developers_hub')">📋 Copy Invite Link</button>
-                    <div class="card-actions"><button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://t.me/eth_developers_hub')">📋 Copy Invite</button><div class="card-actions"><button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://t.me/eth_developers_hub')">📋 Copy Invite</button><a href="https://t.me/eth_developers_hub" target="_blank" rel="noopener noreferrer" class="btn-join">Join Community →</a></div></div>
+                    <a href="https://t.me/eth_developers_hub" target="_blank" rel="noopener noreferrer" class="btn-join">Join Community →</a>
                 </div>
             </div>
         </div>
@@ -1071,7 +1088,7 @@
                 <span class="activity-pulse"><span class="pulse-dot"></span> Live Channel</span>
                 <div class="card-actions">
                     <button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://www.reddit.com/r/ethdev/')">📋 Copy Invite Link</button>
-                    <div class="card-actions"><button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://www.reddit.com/r/ethdev/')">📋 Copy Invite</button><div class="card-actions"><button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://www.reddit.com/r/ethdev/')">📋 Copy Invite</button><a href="https://www.reddit.com/r/ethdev/" target="_blank" rel="noopener noreferrer" class="btn-join">Join Community →</a></div></div>
+                    <a href="https://www.reddit.com/r/ethdev/" target="_blank" rel="noopener noreferrer" class="btn-join">Join Community →</a>
                 </div>
             </div>
         </div>
@@ -1094,7 +1111,7 @@
                 <span class="activity-pulse"><span class="pulse-dot"></span> Live Channel</span>
                 <div class="card-actions">
                     <button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://chat.whatsapp.com/invite/solidity-smart-contracts')">📋 Copy Invite Link</button>
-                    <div class="card-actions"><button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://chat.whatsapp.com/invite/solidity-smart-contracts')">📋 Copy Invite</button><div class="card-actions"><button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://chat.whatsapp.com/invite/solidity-smart-contracts')">📋 Copy Invite</button><a href="https://chat.whatsapp.com/invite/solidity-smart-contracts" target="_blank" rel="noopener noreferrer" class="btn-join">Join Community →</a></div></div>
+                    <a href="https://chat.whatsapp.com/invite/solidity-smart-contracts" target="_blank" rel="noopener noreferrer" class="btn-join">Join Community →</a>
                 </div>
             </div>
         </div>
@@ -1117,7 +1134,7 @@
                 <span class="activity-pulse"><span class="pulse-dot"></span> Live Channel</span>
                 <div class="card-actions">
                     <button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://discord.gg/leetcode')">📋 Copy Invite Link</button>
-                    <div class="card-actions"><button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://discord.gg/leetcode')">📋 Copy Invite</button><div class="card-actions"><button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://discord.gg/leetcode')">📋 Copy Invite</button><a href="https://discord.gg/leetcode" target="_blank" rel="noopener noreferrer" class="btn-join">Join Community →</a></div></div>
+                    <a href="https://discord.gg/leetcode" target="_blank" rel="noopener noreferrer" class="btn-join">Join Community →</a>
                 </div>
             </div>
         </div>
@@ -1140,7 +1157,7 @@
                 <span class="activity-pulse"><span class="pulse-dot"></span> Live Channel</span>
                 <div class="card-actions">
                     <button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://www.reddit.com/r/leetcode/')">📋 Copy Invite Link</button>
-                    <div class="card-actions"><button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://www.reddit.com/r/leetcode/')">📋 Copy Invite</button><div class="card-actions"><button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://www.reddit.com/r/leetcode/')">📋 Copy Invite</button><a href="https://www.reddit.com/r/leetcode/" target="_blank" rel="noopener noreferrer" class="btn-join">Join Community →</a></div></div>
+                    <a href="https://www.reddit.com/r/leetcode/" target="_blank" rel="noopener noreferrer" class="btn-join">Join Community →</a>
                 </div>
             </div>
         </div>
@@ -1163,7 +1180,7 @@
                 <span class="activity-pulse"><span class="pulse-dot"></span> Live Channel</span>
                 <div class="card-actions">
                     <button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://t.me/competitive_programming_club')">📋 Copy Invite Link</button>
-                    <div class="card-actions"><button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://t.me/competitive_programming_club')">📋 Copy Invite</button><div class="card-actions"><button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://t.me/competitive_programming_club')">📋 Copy Invite</button><a href="https://t.me/competitive_programming_club" target="_blank" rel="noopener noreferrer" class="btn-join">Join Community →</a></div></div>
+                    <a href="https://t.me/competitive_programming_club" target="_blank" rel="noopener noreferrer" class="btn-join">Join Community →</a>
                 </div>
             </div>
         </div>
@@ -1186,7 +1203,7 @@
                 <span class="activity-pulse"><span class="pulse-dot"></span> Live Channel</span>
                 <div class="card-actions">
                     <button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://discord.gg/codeforces')">📋 Copy Invite Link</button>
-                    <div class="card-actions"><button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://discord.gg/codeforces')">📋 Copy Invite</button><div class="card-actions"><button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://discord.gg/codeforces')">📋 Copy Invite</button><a href="https://discord.gg/codeforces" target="_blank" rel="noopener noreferrer" class="btn-join">Join Community →</a></div></div>
+                    <a href="https://discord.gg/codeforces" target="_blank" rel="noopener noreferrer" class="btn-join">Join Community →</a>
                 </div>
             </div>
         </div>
@@ -1209,7 +1226,7 @@
                 <span class="activity-pulse"><span class="pulse-dot"></span> Live Channel</span>
                 <div class="card-actions">
                     <button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://chat.whatsapp.com/invite/faang-dsa-sprint')">📋 Copy Invite Link</button>
-                    <div class="card-actions"><button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://chat.whatsapp.com/invite/faang-dsa-sprint')">📋 Copy Invite</button><div class="card-actions"><button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://chat.whatsapp.com/invite/faang-dsa-sprint')">📋 Copy Invite</button><a href="https://chat.whatsapp.com/invite/faang-dsa-sprint" target="_blank" rel="noopener noreferrer" class="btn-join">Join Community →</a></div></div>
+                    <a href="https://chat.whatsapp.com/invite/faang-dsa-sprint" target="_blank" rel="noopener noreferrer" class="btn-join">Join Community →</a>
                 </div>
             </div>
         </div>
@@ -1232,7 +1249,7 @@
                 <span class="activity-pulse"><span class="pulse-dot"></span> Live Channel</span>
                 <div class="card-actions">
                     <button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://discord.gg/rust-lang')">📋 Copy Invite Link</button>
-                    <div class="card-actions"><button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://discord.gg/rust-lang')">📋 Copy Invite</button><div class="card-actions"><button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://discord.gg/rust-lang')">📋 Copy Invite</button><a href="https://discord.gg/rust-lang" target="_blank" rel="noopener noreferrer" class="btn-join">Join Community →</a></div></div>
+                    <a href="https://discord.gg/rust-lang" target="_blank" rel="noopener noreferrer" class="btn-join">Join Community →</a>
                 </div>
             </div>
         </div>
@@ -1255,7 +1272,7 @@
                 <span class="activity-pulse"><span class="pulse-dot"></span> Live Channel</span>
                 <div class="card-actions">
                     <button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://discord.gg/langchain')">📋 Copy Invite Link</button>
-                    <div class="card-actions"><button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://discord.gg/langchain')">📋 Copy Invite</button><div class="card-actions"><button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://discord.gg/langchain')">📋 Copy Invite</button><a href="https://discord.gg/langchain" target="_blank" rel="noopener noreferrer" class="btn-join">Join Community →</a></div></div>
+                    <a href="https://discord.gg/langchain" target="_blank" rel="noopener noreferrer" class="btn-join">Join Community →</a>
                 </div>
             </div>
         </div>
@@ -1278,7 +1295,7 @@
                 <span class="activity-pulse"><span class="pulse-dot"></span> Live Channel</span>
                 <div class="card-actions">
                     <button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://discord.gg/bun')">📋 Copy Invite Link</button>
-                    <div class="card-actions"><button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://discord.gg/bun')">📋 Copy Invite</button><div class="card-actions"><button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://discord.gg/bun')">📋 Copy Invite</button><a href="https://discord.gg/bun" target="_blank" rel="noopener noreferrer" class="btn-join">Join Community →</a></div></div>
+                    <a href="https://discord.gg/bun" target="_blank" rel="noopener noreferrer" class="btn-join">Join Community →</a>
                 </div>
             </div>
         </div>
@@ -1301,7 +1318,7 @@
                 <span class="activity-pulse"><span class="pulse-dot"></span> Live Channel</span>
                 <div class="card-actions">
                     <button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://t.me/systemdesign_fightclub')">📋 Copy Invite Link</button>
-                    <div class="card-actions"><button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://t.me/systemdesign_fightclub')">📋 Copy Invite</button><div class="card-actions"><button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://t.me/systemdesign_fightclub')">📋 Copy Invite</button><a href="https://t.me/systemdesign_fightclub" target="_blank" rel="noopener noreferrer" class="btn-join">Join Community →</a></div></div>
+                    <a href="https://t.me/systemdesign_fightclub" target="_blank" rel="noopener noreferrer" class="btn-join">Join Community →</a>
                 </div>
             </div>
         </div>
@@ -1324,7 +1341,7 @@
                 <span class="activity-pulse"><span class="pulse-dot"></span> Live Channel</span>
                 <div class="card-actions">
                     <button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://discord.gg/solanadev')">📋 Copy Invite Link</button>
-                    <div class="card-actions"><button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://discord.gg/solanadev')">📋 Copy Invite</button><div class="card-actions"><button class="btn-copy-invite" onclick="copyInviteLink(event, 'https://discord.gg/solanadev')">📋 Copy Invite</button><a href="https://discord.gg/solanadev" target="_blank" rel="noopener noreferrer" class="btn-join">Join Community →</a></div></div>
+                    <a href="https://discord.gg/solanadev" target="_blank" rel="noopener noreferrer" class="btn-join">Join Community →</a>
                 </div>
             </div>
         </div>
@@ -1360,7 +1377,7 @@
     
 
     <!-- Persistent Mobile Action Dock -->
-    <div class="mobile-dock">
+    <div class="mobile-dock" role="navigation" aria-label="Mobile Navigation Dock">
         <button class="dock-btn" onclick="focusSearch()">🔍 Search</button>
         <button class="dock-btn dock-btn-accent" onclick="quickFilter('all')">⭐ Verified</button>
         <button class="dock-btn" onclick="location.href='https://jibranpcccc.github.io/developer-coding-hub/submit.html'">➕ Submit</button>
@@ -1425,8 +1442,7 @@
             });
         });
     
-        // Copy Invite Link with Feedback
-            // Copy Invite Link with Interactive Feedback
+    // Copy Invite Link with Interactive Feedback and Fallback
     function copyInviteLink(event, url) {
         if (event && event.preventDefault) event.preventDefault();
         if (event && event.stopPropagation) event.stopPropagation();
@@ -1437,39 +1453,63 @@
             btn = btn.closest('.btn-copy-invite') || btn;
         }
         if (!targetUrl || targetUrl === '#') return;
+
+        function setCopiedUI() {
+            if (btn) {
+                var origHtml = btn.innerHTML;
+                btn.innerHTML = '<span>✓ Copied!</span>';
+                btn.classList.add('copied');
+                setTimeout(function() {
+                    btn.innerHTML = origHtml;
+                    btn.classList.remove('copied');
+                }, 2000);
+            }
+        }
+
         if (navigator.clipboard && navigator.clipboard.writeText) {
             navigator.clipboard.writeText(targetUrl).then(function() {
-                if (btn) {
-                    var origHtml = btn.innerHTML;
-                    btn.innerHTML = '<span>✓ Copied!</span>';
-                    btn.classList.add('copied');
-                    setTimeout(function() {
-                        btn.innerHTML = origHtml;
-                        btn.classList.remove('copied');
-                    }, 2000);
-                }
+                setCopiedUI();
             }).catch(function() {
-                window.open(targetUrl, '_blank');
+                fallbackCopyText(targetUrl, setCopiedUI);
             });
         } else {
-            window.open(targetUrl, '_blank');
+            fallbackCopyText(targetUrl, setCopiedUI);
         }
     }
-            // Power-User Keyboard Shortcut: Press '/' to Focus Search, 'Escape' to Clear
-        document.addEventListener('keydown', (e) => {
-            const searchEl = document.getElementById('searchInput') || document.getElementById('search-input');
-            if (!searchEl) return;
-            if (e.key === '/' && document.activeElement !== searchEl) {
-                e.preventDefault();
-                searchEl.focus();
-                searchEl.select();
-            } else if (e.key === 'Escape' && document.activeElement === searchEl) {
-                searchEl.value = '';
-                if (typeof filterCards === 'function') filterCards();
-                if (typeof clearSearch === 'function') clearSearch();
-                searchEl.blur();
-            }
-        });
+
+    function fallbackCopyText(text, callback) {
+        var textArea = document.createElement('textarea');
+        textArea.value = text;
+        textArea.style.position = 'fixed';
+        textArea.style.opacity = '0';
+        document.body.appendChild(textArea);
+        textArea.focus();
+        textArea.select();
+        try {
+            document.execCommand('copy');
+            if (callback) callback();
+        } catch (err) {
+            window.open(text, '_blank');
+        }
+        document.body.removeChild(textArea);
+    }
+
+    // Power-User Keyboard Shortcut: Press '/' to Focus Search, 'Escape' to Clear
+    document.addEventListener('keydown', (e) => {
+        const searchEl = document.getElementById('searchInput') || document.getElementById('search-input');
+        if (!searchEl) return;
+        if (e.key === '/' && document.activeElement !== searchEl && !['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement.tagName)) {
+            e.preventDefault();
+            searchEl.focus();
+            searchEl.select();
+            searchEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        } else if (e.key === 'Escape' && document.activeElement === searchEl) {
+            searchEl.value = '';
+            if (typeof filterCards === 'function') filterCards();
+            if (typeof clearSearch === 'function') clearSearch();
+            searchEl.blur();
+        }
+    });
         
     </script>
 </body>
