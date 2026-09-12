@@ -318,12 +318,12 @@
   },
   {
     "id": "cncf-community",
-    "title": "CNCF Official Community",
+    "title": "CNCF Official Community Hub",
     "category": "DevOps & Cloud",
-    "platform": "Discord",
+    "platform": "Official Community",
     "memberCount": 115000,
     "description": "The Cloud Native Computing Foundation server hosting Kubernetes, Prometheus, Envoy, Helm, OpenTelemetry, and ArgoCD contributors and operators.",
-    "joinUrl": "https://communityinviter.com/apps/cloud-native/cncf",
+    "joinUrl": "https://community.cncf.io/",
     "tags": [
       "kubernetes",
       "cncf",

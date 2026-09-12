@@ -1,4 +1,4 @@
-﻿import json
+import json
 import os
 import html
 from datetime import datetime, timezone
@@ -179,8 +179,13 @@ def build_all():
         cat_badge = get_cat_badge_style(g["category"])
         plat_badge = get_platform_badge_style(g["platform"])
         plat_icon = PLATFORM_ICONS.get(g["platform"], "")
-        tags_html = " ".join([f"""<span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-800/80 text-slate-300 border border-slate-700/60">#{html.escape(t)}</span>""" for t in g.get("tags", [])])
-        featured_badge = """<span class="px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider bg-amber-500/20 text-amber-300 border border-amber-500/40 rounded-full flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>Featured</span>""" if g.get("featured") else ""
+        is_today = g.get("isTodaysPick") or g.get("lastUpdated") == datetime.now(timezone.utc).strftime("%Y-%m-%d")
+        if is_today:
+            featured_badge = """<span class="px-2.5 py-1 text-[11px] font-bold uppercase tracking-wider bg-amber-500/20 text-amber-300 border border-amber-500/40 rounded-full flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>📅 Today's Fresh Pick</span>"""
+        elif g.get("featured"):
+            featured_badge = """<span class="px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider bg-amber-500/20 text-amber-300 border border-amber-500/40 rounded-full flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>Featured</span>"""
+        else:
+            featured_badge = ""
 
         card = f"""
         <article class="group relative bg-slate-900/90 border border-slate-800 hover:border-cyan-500/50 rounded-xl p-5 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/5 hover:-translate-y-1 community-card" 
