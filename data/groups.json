@@ -1,5 +1,24 @@
 [
   {
+    "id": "developer-coding-hub-reddit-20260912-1",
+    "title": "r/kubernetes Cloud Native",
+    "platform": "Reddit",
+    "category": "Container Orchestration",
+    "memberCount": "150,000+ members",
+    "description": "Discussions on Kubernetes cluster management, Helm charts, ingress controllers, service meshes, and K8s operators.",
+    "joinUrl": "https://www.reddit.com/r/kubernetes/",
+    "tags": [
+      "kubernetes",
+      "k8s",
+      "containers",
+      "reddit"
+    ],
+    "verified": true,
+    "featured": true,
+    "isTodaysPick": true,
+    "lastUpdated": "2026-09-12"
+  },
+  {
     "id": "python-discord",
     "title": "Python Discord Official",
     "category": "Python & Data",
@@ -16,7 +35,8 @@
     ],
     "verified": true,
     "featured": true,
-    "lastUpdated": "2026-09-03"
+    "lastUpdated": "2026-09-03",
+    "isTodaysPick": false
   },
   {
     "id": "reddit-python",
@@ -35,7 +55,8 @@
     ],
     "verified": true,
     "featured": false,
-    "lastUpdated": "2026-09-03"
+    "lastUpdated": "2026-09-03",
+    "isTodaysPick": false
   },
   {
     "id": "python-developers-tg",
@@ -54,7 +75,8 @@
     ],
     "verified": true,
     "featured": false,
-    "lastUpdated": "2026-09-03"
+    "lastUpdated": "2026-09-03",
+    "isTodaysPick": false
   },
   {
     "id": "python-data-ninjas-wa",
@@ -73,7 +95,8 @@
     ],
     "verified": true,
     "featured": false,
-    "lastUpdated": "2026-09-03"
+    "lastUpdated": "2026-09-03",
+    "isTodaysPick": false
   },
   {
     "id": "hugging-face-discord",
@@ -82,7 +105,7 @@
     "platform": "Discord",
     "memberCount": 192000,
     "description": "The epicenter of open-source AI. Collaborate directly with Hugging Face maintainers on Transformers, Diffusers, PEFT, TRL, vLLM, and local open LLM fine-tuning.",
-    "joinUrl": "https://discord.gg/huggingface",
+    "joinUrl": "https://discuss.huggingface.co",
     "tags": [
       "ai",
       "transformers",
@@ -92,7 +115,8 @@
     ],
     "verified": true,
     "featured": true,
-    "lastUpdated": "2026-09-03"
+    "lastUpdated": "2026-09-03",
+    "isTodaysPick": false
   },
   {
     "id": "reddit-machinelearning",
@@ -110,7 +134,8 @@
     ],
     "verified": true,
     "featured": true,
-    "lastUpdated": "2026-09-03"
+    "lastUpdated": "2026-09-03",
+    "isTodaysPick": false
   },
   {
     "id": "pytorch-discord",
@@ -129,7 +154,8 @@
     ],
     "verified": true,
     "featured": false,
-    "lastUpdated": "2026-09-03"
+    "lastUpdated": "2026-09-03",
+    "isTodaysPick": false
   },
   {
     "id": "llm-practitioners-tg",
@@ -148,7 +174,8 @@
     ],
     "verified": true,
     "featured": false,
-    "lastUpdated": "2026-09-03"
+    "lastUpdated": "2026-09-03",
+    "isTodaysPick": false
   },
   {
     "id": "generative-ai-wa",
@@ -167,7 +194,8 @@
     ],
     "verified": true,
     "featured": false,
-    "lastUpdated": "2026-09-03"
+    "lastUpdated": "2026-09-03",
+    "isTodaysPick": false
   },
   {
     "id": "the-odin-project-discord",
@@ -186,7 +214,8 @@
     ],
     "verified": true,
     "featured": true,
-    "lastUpdated": "2026-09-03"
+    "lastUpdated": "2026-09-03",
+    "isTodaysPick": false
   },
   {
     "id": "reactiflux-discord",
@@ -205,7 +234,8 @@
     ],
     "verified": true,
     "featured": true,
-    "lastUpdated": "2026-09-03"
+    "lastUpdated": "2026-09-03",
+    "isTodaysPick": false
   },
   {
     "id": "reddit-webdev",
@@ -224,7 +254,8 @@
     ],
     "verified": true,
     "featured": false,
-    "lastUpdated": "2026-09-03"
+    "lastUpdated": "2026-09-03",
+    "isTodaysPick": false
   },
   {
     "id": "react-devs-tg",
@@ -243,7 +274,8 @@
     ],
     "verified": true,
     "featured": false,
-    "lastUpdated": "2026-09-03"
+    "lastUpdated": "2026-09-03",
+    "isTodaysPick": false
   },
   {
     "id": "fullstack-masters-wa",
@@ -262,7 +294,8 @@
     ],
     "verified": true,
     "featured": false,
-    "lastUpdated": "2026-09-03"
+    "lastUpdated": "2026-09-03",
+    "isTodaysPick": false
   },
   {
     "id": "typescript-discord",
@@ -280,7 +313,8 @@
     ],
     "verified": true,
     "featured": false,
-    "lastUpdated": "2026-09-03"
+    "lastUpdated": "2026-09-03",
+    "isTodaysPick": false
   },
   {
     "id": "cncf-community",
@@ -299,7 +333,8 @@
     ],
     "verified": true,
     "featured": true,
-    "lastUpdated": "2026-09-03"
+    "lastUpdated": "2026-09-03",
+    "isTodaysPick": false
   },
   {
     "id": "reddit-devops",
@@ -318,7 +353,8 @@
     ],
     "verified": true,
     "featured": false,
-    "lastUpdated": "2026-09-03"
+    "lastUpdated": "2026-09-03",
+    "isTodaysPick": false
   },
   {
     "id": "devops-engineers-tg",
@@ -337,7 +373,8 @@
     ],
     "verified": true,
     "featured": false,
-    "lastUpdated": "2026-09-03"
+    "lastUpdated": "2026-09-03",
+    "isTodaysPick": false
   },
   {
     "id": "k8s-operators-wa",
@@ -356,7 +393,8 @@
     ],
     "verified": true,
     "featured": false,
-    "lastUpdated": "2026-09-03"
+    "lastUpdated": "2026-09-03",
+    "isTodaysPick": false
   },
   {
     "id": "hashicorp-discord",
@@ -375,7 +413,8 @@
     ],
     "verified": true,
     "featured": false,
-    "lastUpdated": "2026-09-03"
+    "lastUpdated": "2026-09-03",
+    "isTodaysPick": false
   },
   {
     "id": "developer-dao-discord",
@@ -394,7 +433,8 @@
     ],
     "verified": true,
     "featured": true,
-    "lastUpdated": "2026-09-03"
+    "lastUpdated": "2026-09-03",
+    "isTodaysPick": false
   },
   {
     "id": "ethereum-developers-tg",
@@ -413,7 +453,8 @@
     ],
     "verified": true,
     "featured": false,
-    "lastUpdated": "2026-09-03"
+    "lastUpdated": "2026-09-03",
+    "isTodaysPick": false
   },
   {
     "id": "reddit-ethdev",
@@ -432,7 +473,8 @@
     ],
     "verified": true,
     "featured": false,
-    "lastUpdated": "2026-09-03"
+    "lastUpdated": "2026-09-03",
+    "isTodaysPick": false
   },
   {
     "id": "solidity-builders-wa",
@@ -451,7 +493,8 @@
     ],
     "verified": true,
     "featured": false,
-    "lastUpdated": "2026-09-03"
+    "lastUpdated": "2026-09-03",
+    "isTodaysPick": false
   },
   {
     "id": "leetcode-official-discord",
@@ -470,7 +513,8 @@
     ],
     "verified": true,
     "featured": true,
-    "lastUpdated": "2026-09-03"
+    "lastUpdated": "2026-09-03",
+    "isTodaysPick": false
   },
   {
     "id": "reddit-leetcode",
@@ -489,7 +533,8 @@
     ],
     "verified": true,
     "featured": false,
-    "lastUpdated": "2026-09-03"
+    "lastUpdated": "2026-09-03",
+    "isTodaysPick": false
   },
   {
     "id": "competitive-programming-tg",
@@ -508,7 +553,8 @@
     ],
     "verified": true,
     "featured": false,
-    "lastUpdated": "2026-09-03"
+    "lastUpdated": "2026-09-03",
+    "isTodaysPick": false
   },
   {
     "id": "codeforces-discord",
@@ -526,7 +572,8 @@
     ],
     "verified": true,
     "featured": false,
-    "lastUpdated": "2026-09-03"
+    "lastUpdated": "2026-09-03",
+    "isTodaysPick": false
   },
   {
     "id": "faang-dsa-wa",
@@ -545,7 +592,8 @@
     ],
     "verified": true,
     "featured": false,
-    "lastUpdated": "2026-09-03"
+    "lastUpdated": "2026-09-03",
+    "isTodaysPick": false
   },
   {
     "id": "rust-community-discord",
@@ -564,7 +612,8 @@
     ],
     "verified": true,
     "featured": true,
-    "lastUpdated": "2026-09-03"
+    "lastUpdated": "2026-09-03",
+    "isTodaysPick": false
   },
   {
     "id": "langchain-ai-discord",
@@ -573,7 +622,7 @@
     "platform": "Discord",
     "memberCount": 87000,
     "description": "Official community for developers building LLM agents, LangGraph workflows, and retrieval-augmented generation systems.",
-    "joinUrl": "https://discord.gg/langchain",
+    "joinUrl": "https://github.com/langchain-ai/langchain/discussions",
     "tags": [
       "langchain",
       "agents",
@@ -583,7 +632,8 @@
     ],
     "verified": true,
     "featured": true,
-    "lastUpdated": "2026-09-03"
+    "lastUpdated": "2026-09-03",
+    "isTodaysPick": false
   },
   {
     "id": "bun-runtime-discord",
@@ -602,7 +652,8 @@
     ],
     "verified": true,
     "featured": false,
-    "lastUpdated": "2026-09-03"
+    "lastUpdated": "2026-09-03",
+    "isTodaysPick": false
   },
   {
     "id": "system-design-fight-club-tg",
@@ -620,7 +671,8 @@
     ],
     "verified": true,
     "featured": false,
-    "lastUpdated": "2026-09-03"
+    "lastUpdated": "2026-09-03",
+    "isTodaysPick": false
   },
   {
     "id": "solana-developers-discord",
@@ -639,6 +691,7 @@
     ],
     "verified": true,
     "featured": false,
-    "lastUpdated": "2026-09-03"
+    "lastUpdated": "2026-09-03",
+    "isTodaysPick": false
   }
 ]
