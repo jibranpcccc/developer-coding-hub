@@ -7,10 +7,17 @@
     <link>https://jibranpcccc.github.io/developer-coding-hub/</link>
     <description>Fresh curated directory of verified developer communities across Python, JavaScript, DevOps, Web3, and AI/ML.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 15 Sep 2026 06:00:05 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 18 Sep 2026 06:14:13 GMT</lastBuildDate>
     <atom:link rel="self" type="application/rss+xml" href="https://jibranpcccc.github.io/developer-coding-hub/feed.xml" />
     <atom:link rel="hub" href="https://pubsubhubbub.appspot.com/publish" />
-                                <item>
+                                    <item>
+      <title>📅 Today's Fresh Pick: HashiCorp Discuss Community (Forum)</title>
+      <link>https://discuss.hashicorp.com</link>
+      <guid isPermaLink="false">https://jibranpcccc.github.io/developer-coding-hub/#developer-coding-hub-forum-20260918-1-2026-09-18</guid>
+      <pubDate>Fri, 18 Sep 2026 06:14:13 GMT</pubDate>
+      <description>Newly verified community added to Developer &amp; Coding Communities Hub: Official forum for Terraform modules, Vault secret management, Nomad orchestration, and Consul networking.</description>
+    </item>
+<item>
       <title>📅 Today's Fresh Pick: Cloud Native &amp; K8s Network (Telegram)</title>
       <link>https://t.me/cloud_native_hub</link>
       <guid isPermaLink="false">https://jibranpcccc.github.io/developer-coding-hub/#developer-coding-hub-telegram-20260915-1-2026-09-15</guid>
