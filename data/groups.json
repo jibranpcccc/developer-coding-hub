@@ -1,5 +1,24 @@
 [
   {
+    "id": "developer-coding-hub-discord-20260921-1",
+    "title": "The Programmer's Hangout",
+    "platform": "Discord",
+    "category": "Software Engineering",
+    "memberCount": "220,000+ members",
+    "description": "A collaborative multi-language developer Discord covering architecture, algorithms, career advice, and live coding.",
+    "joinUrl": "https://discord.gg/programming",
+    "tags": [
+      "programming",
+      "multi-language",
+      "discord",
+      "career"
+    ],
+    "verified": true,
+    "featured": true,
+    "isTodaysPick": true,
+    "lastUpdated": "2026-09-21"
+  },
+  {
     "id": "developer-coding-hub-reddit-20260920-1",
     "title": "r/programming International",
     "platform": "Reddit",
@@ -15,7 +34,7 @@
     ],
     "verified": true,
     "featured": true,
-    "isTodaysPick": true,
+    "isTodaysPick": false,
     "lastUpdated": "2026-09-20"
   },
   {
