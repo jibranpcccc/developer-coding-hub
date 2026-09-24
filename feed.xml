@@ -7,10 +7,17 @@
     <link>https://jibranpcccc.github.io/developer-coding-hub/</link>
     <description>Fresh curated directory of verified developer communities across Python, JavaScript, DevOps, Web3, and AI/ML.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 23 Sep 2026 06:00:06 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 24 Sep 2026 06:00:09 GMT</lastBuildDate>
     <atom:link rel="self" type="application/rss+xml" href="https://jibranpcccc.github.io/developer-coding-hub/feed.xml" />
     <atom:link rel="hub" href="https://pubsubhubbub.appspot.com/publish" />
-                                                        <item>
+                                                            <item>
+      <title>📅 Today's Fresh Pick: r/javascript Global Hub (Reddit)</title>
+      <link>https://www.reddit.com/r/javascript/</link>
+      <guid isPermaLink="false">https://jibranpcccc.github.io/developer-coding-hub/#developer-coding-hub-reddit-20260924-1-2026-09-24</guid>
+      <pubDate>Thu, 24 Sep 2026 06:00:09 GMT</pubDate>
+      <description>Newly verified community added to Developer &amp; Coding Communities Hub: Discussions, releases, frameworks, and architecture patterns from across the JavaScript and ECMAScript ecosystem.</description>
+    </item>
+<item>
       <title>📅 Today's Fresh Pick: Rust Language News &amp; Updates (Telegram)</title>
       <link>https://t.me/rust_lang_news</link>
       <guid isPermaLink="false">https://jibranpcccc.github.io/developer-coding-hub/#developer-coding-hub-telegram-20260923-1-2026-09-23</guid>
@@ -188,14 +195,6 @@
         <pubDate>Sun, 06 Sep 2026 09:25:41 GMT</pubDate>
         <category>Frontend &amp; Fullstack</category>
         <description>The largest chat community of React, React Native, Redux, Next.js, and TypeScript developers. Regular Q&amp;A sessions with core React maintainers and web platform authors. - Join 215.0K+ members on Discord.</description>
-    </item>
-<item>
-        <title>r/webdev Community (Reddit)</title>
-        <link>https://www.reddit.com/r/webdev/</link>
-        <guid isPermaLink="false">reddit-webdev-2026-09-03</guid>
-        <pubDate>Sun, 06 Sep 2026 09:25:41 GMT</pubDate>
-        <category>Frontend &amp; Fullstack</category>
-        <description>A global community dedicated to all things web development. Share showcase projects, client dilemmas, CSS tricks, performance benchmarks, and frontend frameworks. - Join 2.2M+ members on Reddit.</description>
     </item>
   </channel>
 </rss>
