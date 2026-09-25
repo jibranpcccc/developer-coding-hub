@@ -7,10 +7,17 @@
     <link>https://jibranpcccc.github.io/developer-coding-hub/</link>
     <description>Fresh curated directory of verified developer communities across Python, JavaScript, DevOps, Web3, and AI/ML.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 24 Sep 2026 06:00:09 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 25 Sep 2026 06:00:05 GMT</lastBuildDate>
     <atom:link rel="self" type="application/rss+xml" href="https://jibranpcccc.github.io/developer-coding-hub/feed.xml" />
     <atom:link rel="hub" href="https://pubsubhubbub.appspot.com/publish" />
-                                                            <item>
+                                                                <item>
+      <title>📅 Today's Fresh Pick: Web Developers Network (Telegram)</title>
+      <link>https://t.me/webdev_hub</link>
+      <guid isPermaLink="false">https://jibranpcccc.github.io/developer-coding-hub/#developer-coding-hub-telegram-20260925-1-2026-09-25</guid>
+      <pubDate>Fri, 25 Sep 2026 06:00:05 GMT</pubDate>
+      <description>Newly verified community added to Developer &amp; Coding Communities Hub: Public channel providing updates on frontend, backend, browser standards, and dev tooling.</description>
+    </item>
+<item>
       <title>📅 Today's Fresh Pick: r/javascript Global Hub (Reddit)</title>
       <link>https://www.reddit.com/r/javascript/</link>
       <guid isPermaLink="false">https://jibranpcccc.github.io/developer-coding-hub/#developer-coding-hub-reddit-20260924-1-2026-09-24</guid>
@@ -187,14 +194,6 @@
         <pubDate>Sun, 06 Sep 2026 09:25:41 GMT</pubDate>
         <category>Frontend &amp; Fullstack</category>
         <description>A premier community helping self-taught developers master fullstack JavaScript, HTML/CSS, React, Node.js, and modern software engineering fundamentals with hands-on mentor support. - Join 328.0K+ members on Discord.</description>
-    </item>
-<item>
-        <title>Reactiflux (Discord)</title>
-        <link>https://discord.gg/reactiflux</link>
-        <guid isPermaLink="false">reactiflux-discord-2026-09-03</guid>
-        <pubDate>Sun, 06 Sep 2026 09:25:41 GMT</pubDate>
-        <category>Frontend &amp; Fullstack</category>
-        <description>The largest chat community of React, React Native, Redux, Next.js, and TypeScript developers. Regular Q&amp;A sessions with core React maintainers and web platform authors. - Join 215.0K+ members on Discord.</description>
     </item>
   </channel>
 </rss>
