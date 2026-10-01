@@ -7,10 +7,17 @@
     <link>https://jibranpcccc.github.io/developer-coding-hub/</link>
     <description>Fresh curated directory of verified developer communities across Python, JavaScript, DevOps, Web3, and AI/ML.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 30 Sep 2026 06:13:13 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 01 Oct 2026 07:51:17 GMT</lastBuildDate>
     <atom:link rel="self" type="application/rss+xml" href="https://jibranpcccc.github.io/developer-coding-hub/feed.xml" />
     <atom:link rel="hub" href="https://pubsubhubbub.appspot.com/publish" />
-                                                                            <item>
+                                                                                <item>
+      <title>📅 Today's Fresh Pick: r/cpp High Performance Systems (Reddit)</title>
+      <link>https://www.reddit.com/r/cpp/</link>
+      <guid isPermaLink="false">https://jibranpcccc.github.io/developer-coding-hub/#developer-coding-hub-reddit-20261001-1-2026-10-01</guid>
+      <pubDate>Thu, 01 Oct 2026 07:51:17 GMT</pubDate>
+      <description>Newly verified community added to Developer &amp; Coding Communities Hub: Discussions on modern C++ (C++17/20/23), memory models, template metaprogramming, and graphics pipelines.</description>
+    </item>
+<item>
       <title>📅 Today's Fresh Pick: r/typescript Architecture (Reddit)</title>
       <link>https://www.reddit.com/r/typescript/</link>
       <guid isPermaLink="false">https://jibranpcccc.github.io/developer-coding-hub/#developer-coding-hub-reddit-20260930-1-2026-09-30</guid>
@@ -183,14 +190,6 @@
         <pubDate>Sun, 06 Sep 2026 09:25:41 GMT</pubDate>
         <category>AI &amp; ML</category>
         <description>Academic and industry forum for researchers and practitioners. Features arXiv paper discussions, novel model benchmark breakthroughs, and research critiques. - Join 3.0M+ members on Reddit.</description>
-    </item>
-<item>
-        <title>PyTorch Official Community (Discord)</title>
-        <link>https://discord.gg/pytorch</link>
-        <guid isPermaLink="false">pytorch-discord-2026-09-03</guid>
-        <pubDate>Sun, 06 Sep 2026 09:25:41 GMT</pubDate>
-        <category>AI &amp; ML</category>
-        <description>Official PyTorch community sponsored by the Linux Foundation. Connect with Core PyTorch maintainers, TorchDynamo compilers, CUDA kernel developers, and ML researchers. - Join 91.0K+ members on Discord.</description>
     </item>
   </channel>
 </rss>
