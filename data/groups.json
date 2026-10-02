@@ -1,5 +1,24 @@
 [
   {
+    "id": "developer-coding-hub-discord-20261002-1",
+    "title": "Next.js Developers Discord",
+    "platform": "Discord",
+    "category": "Frontend Engineering",
+    "memberCount": "120,000+ members",
+    "description": "Official community Discord for Vercel Next.js developers, Server Components, and App Router architectures.",
+    "joinUrl": "https://discord.gg/nextjs",
+    "tags": [
+      "nextjs",
+      "react",
+      "frontend",
+      "discord"
+    ],
+    "verified": true,
+    "featured": true,
+    "isTodaysPick": true,
+    "lastUpdated": "2026-10-02"
+  },
+  {
     "id": "developer-coding-hub-reddit-20261001-1",
     "title": "r/cpp High Performance Systems",
     "platform": "Reddit",
@@ -15,7 +34,7 @@
     ],
     "verified": true,
     "featured": true,
-    "isTodaysPick": true,
+    "isTodaysPick": false,
     "lastUpdated": "2026-10-01"
   },
   {
