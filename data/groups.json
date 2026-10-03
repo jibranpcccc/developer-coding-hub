@@ -1,5 +1,24 @@
 [
   {
+    "id": "developer-coding-hub-discord-20261003-1",
+    "title": "Vue Land Community Discord",
+    "platform": "Discord",
+    "category": "Frontend Engineering",
+    "memberCount": "85,000+ members",
+    "description": "The official Discord community for Vue.js, Nuxt, Vite, Pinia, and frontend ecosystem tools.",
+    "joinUrl": "https://discord.gg/vue",
+    "tags": [
+      "vue",
+      "nuxt",
+      "frontend",
+      "discord"
+    ],
+    "verified": true,
+    "featured": true,
+    "isTodaysPick": true,
+    "lastUpdated": "2026-10-03"
+  },
+  {
     "id": "developer-coding-hub-discord-20261002-1",
     "title": "Next.js Developers Discord",
     "platform": "Discord",
@@ -15,7 +34,7 @@
     ],
     "verified": true,
     "featured": true,
-    "isTodaysPick": true,
+    "isTodaysPick": false,
     "lastUpdated": "2026-10-02"
   },
   {
