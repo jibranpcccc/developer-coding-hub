@@ -1,5 +1,24 @@
 [
   {
+    "id": "developer-coding-hub-discord-20261005-1",
+    "title": "Tailwind CSS Discord",
+    "platform": "Discord",
+    "category": "Frontend Engineering",
+    "memberCount": "72,000+ members",
+    "description": "Official community for Tailwind CSS utility-first design, component architectures, and responsive layout styling.",
+    "joinUrl": "https://discord.gg/tailwind",
+    "tags": [
+      "tailwind",
+      "css",
+      "frontend",
+      "discord"
+    ],
+    "verified": true,
+    "featured": true,
+    "isTodaysPick": true,
+    "lastUpdated": "2026-10-05"
+  },
+  {
     "id": "developer-coding-hub-discord-20261003-1",
     "title": "Vue Land Community Discord",
     "platform": "Discord",
@@ -15,7 +34,7 @@
     ],
     "verified": true,
     "featured": true,
-    "isTodaysPick": true,
+    "isTodaysPick": false,
     "lastUpdated": "2026-10-03"
   },
   {
