@@ -7,10 +7,17 @@
     <link>https://jibranpcccc.github.io/developer-coding-hub/</link>
     <description>Fresh curated directory of verified developer communities across Python, JavaScript, DevOps, Web3, and AI/ML.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 06 Oct 2026 06:00:06 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 08 Oct 2026 06:00:05 GMT</lastBuildDate>
     <atom:link rel="self" type="application/rss+xml" href="https://jibranpcccc.github.io/developer-coding-hub/feed.xml" />
     <atom:link rel="hub" href="https://pubsubhubbub.appspot.com/publish" />
-                                                                                                <item>
+                                                                                                    <item>
+      <title>📅 Today's Fresh Pick: Next.js GitHub Discussions (GitHub)</title>
+      <link>https://github.com/vercel/next.js/discussions</link>
+      <guid isPermaLink="false">https://jibranpcccc.github.io/developer-coding-hub/#developer-coding-hub-github-20261008-1-2026-10-08</guid>
+      <pubDate>Thu, 08 Oct 2026 06:00:05 GMT</pubDate>
+      <description>Newly verified community added to Developer &amp; Coding Communities Hub: Active community discussions and RFCs on Next.js architectures, streaming SSR, and edge rendering.</description>
+    </item>
+<item>
       <title>📅 Today's Fresh Pick: Rust Language GitHub Discussions (GitHub)</title>
       <link>https://users.rust-lang.org</link>
       <guid isPermaLink="false">https://jibranpcccc.github.io/developer-coding-hub/#developer-coding-hub-github-20261006-1-2026-10-06</guid>
@@ -178,14 +185,6 @@
         <pubDate>Sun, 06 Sep 2026 09:25:41 GMT</pubDate>
         <category>Python &amp; Data</category>
         <description>The largest and friendliest Discord community focused on the Python programming language. Offers 24/7 peer code review, specialized channels for machine learning, data science, web development, and recurring open-source hackathons. - Join 385.0K+ members on Discord.</description>
-    </item>
-<item>
-        <title>r/Python Community (Reddit)</title>
-        <link>https://www.reddit.com/r/Python/</link>
-        <guid isPermaLink="false">reddit-python-2026-09-03</guid>
-        <pubDate>Sun, 06 Sep 2026 09:25:41 GMT</pubDate>
-        <category>Python &amp; Data</category>
-        <description>The official Reddit hub for Python programming news, package releases, deep-dive architectural discussions, tutorials, and Python PEP enhancement updates. - Join 1.2M+ members on Reddit.</description>
     </item>
   </channel>
 </rss>
