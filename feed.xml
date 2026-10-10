@@ -7,10 +7,17 @@
     <link>https://jibranpcccc.github.io/developer-coding-hub/</link>
     <description>Fresh curated directory of verified developer communities across Python, JavaScript, DevOps, Web3, and AI/ML.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 09 Oct 2026 06:00:06 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 10 Oct 2026 06:00:05 GMT</lastBuildDate>
     <atom:link rel="self" type="application/rss+xml" href="https://jibranpcccc.github.io/developer-coding-hub/feed.xml" />
     <atom:link rel="hub" href="https://pubsubhubbub.appspot.com/publish" />
-                                                                                                        <item>
+                                                                                                            <item>
+      <title>📅 Today's Fresh Pick: DEV Community WebDev Hub (Forum)</title>
+      <link>https://dev.to/t/webdev</link>
+      <guid isPermaLink="false">https://jibranpcccc.github.io/developer-coding-hub/#developer-coding-hub-forum-20261010-1-2026-10-10</guid>
+      <pubDate>Sat, 10 Oct 2026 06:00:05 GMT</pubDate>
+      <description>Newly verified community added to Developer &amp; Coding Communities Hub: Global developer blogging and discussion platform sharing tutorials, benchmarks, and project breakdowns.</description>
+    </item>
+<item>
       <title>📅 Today's Fresh Pick: Stack Overflow Python Questions (Forum)</title>
       <link>https://stackoverflow.com/questions/tagged/python</link>
       <guid isPermaLink="false">https://jibranpcccc.github.io/developer-coding-hub/#developer-coding-hub-forum-20261009-1-2026-10-09</guid>
@@ -177,13 +184,6 @@
       <guid isPermaLink="false">https://jibranpcccc.github.io/developer-coding-hub/#developer-coding-hub-reddit-20260912-1-2026-09-12</guid>
       <pubDate>Sat, 12 Sep 2026 09:42:31 GMT</pubDate>
       <description>Newly verified community added to Developer &amp; Coding Communities Hub: Guides, Dockerfile optimization, multi-stage builds, and Docker Compose architectures for modern microservices.</description>
-    </item>
-<item>
-      <title>📅 Today's Fresh Pick: r/kubernetes Cloud Native (Reddit)</title>
-      <link>https://www.reddit.com/r/kubernetes/</link>
-      <guid isPermaLink="false">https://jibranpcccc.github.io/developer-coding-hub/#developer-coding-hub-reddit-20260912-1-2026-09-12</guid>
-      <pubDate>Sat, 12 Sep 2026 07:23:20 GMT</pubDate>
-      <description>Newly verified community added to Developer &amp; Coding Communities Hub: Discussions on Kubernetes cluster management, Helm charts, ingress controllers, service meshes, and K8s operators.</description>
     </item>
   </channel>
 </rss>
