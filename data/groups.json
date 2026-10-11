@@ -1,5 +1,24 @@
 [
   {
+    "id": "developer-coding-hub-reddit-20261011-1",
+    "title": "r/cybersecurity Defense Hub",
+    "platform": "Reddit",
+    "category": "Cybersecurity",
+    "memberCount": "1,100,000+ members",
+    "description": "Primary community for enterprise security analysts, blue teams, compliance frameworks, and threat intelligence.",
+    "joinUrl": "https://www.reddit.com/r/cybersecurity/",
+    "tags": [
+      "cybersecurity",
+      "infosec",
+      "soc",
+      "reddit"
+    ],
+    "verified": true,
+    "featured": true,
+    "isTodaysPick": true,
+    "lastUpdated": "2026-10-11"
+  },
+  {
     "id": "developer-coding-hub-forum-20261010-1",
     "title": "DEV Community WebDev Hub",
     "platform": "Forum",
@@ -15,7 +34,7 @@
     ],
     "verified": true,
     "featured": true,
-    "isTodaysPick": true,
+    "isTodaysPick": false,
     "lastUpdated": "2026-10-10"
   },
   {
