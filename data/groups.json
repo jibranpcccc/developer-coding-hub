@@ -1,5 +1,24 @@
 [
   {
+    "id": "developer-coding-hub-discord-20261018-1",
+    "title": "TryHackMe Official Discord",
+    "platform": "Discord",
+    "category": "Cybersecurity Education",
+    "memberCount": "210,000+ members",
+    "description": "Beginner and intermediate hands-on cybersecurity learning platform with active study groups and walkthrough support.",
+    "joinUrl": "https://discord.gg/tryhackme",
+    "tags": [
+      "tryhackme",
+      "education",
+      "infosec",
+      "discord"
+    ],
+    "verified": true,
+    "featured": true,
+    "isTodaysPick": true,
+    "lastUpdated": "2026-10-18"
+  },
+  {
     "id": "developer-coding-hub-discord-20261017-1",
     "title": "Hack The Box Official Discord",
     "platform": "Discord",
@@ -15,7 +34,7 @@
     ],
     "verified": true,
     "featured": true,
-    "isTodaysPick": true,
+    "isTodaysPick": false,
     "lastUpdated": "2026-10-17"
   },
   {
