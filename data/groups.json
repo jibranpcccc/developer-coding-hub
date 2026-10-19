@@ -1,5 +1,24 @@
 [
   {
+    "id": "developer-coding-hub-telegram-20261019-1",
+    "title": "Cyber Security News Alerts",
+    "platform": "Telegram",
+    "category": "Threat Intelligence",
+    "memberCount": "115,000+ members",
+    "description": "Immediate alerts on 0-day exploits, CVE disclosures, ransomware attacks, and critical enterprise patches.",
+    "joinUrl": "https://t.me/cybersecurity_news",
+    "tags": [
+      "cybersecurity",
+      "telegram",
+      "cve",
+      "threat-intel"
+    ],
+    "verified": true,
+    "featured": true,
+    "isTodaysPick": true,
+    "lastUpdated": "2026-10-19"
+  },
+  {
     "id": "developer-coding-hub-discord-20261018-1",
     "title": "TryHackMe Official Discord",
     "platform": "Discord",
@@ -15,7 +34,7 @@
     ],
     "verified": true,
     "featured": true,
-    "isTodaysPick": true,
+    "isTodaysPick": false,
     "lastUpdated": "2026-10-18"
   },
   {

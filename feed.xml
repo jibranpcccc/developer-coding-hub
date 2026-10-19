@@ -7,10 +7,17 @@
     <link>https://jibranpcccc.github.io/developer-coding-hub/</link>
     <description>Fresh curated directory of verified developer communities across Python, JavaScript, DevOps, Web3, and AI/ML.</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 18 Oct 2026 06:00:05 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 19 Oct 2026 06:00:05 GMT</lastBuildDate>
     <atom:link rel="self" type="application/rss+xml" href="https://jibranpcccc.github.io/developer-coding-hub/feed.xml" />
     <atom:link rel="hub" href="https://pubsubhubbub.appspot.com/publish" />
-                                                                                                                                    <item>
+                                                                                                                                        <item>
+      <title>📅 Today's Fresh Pick: Cyber Security News Alerts (Telegram)</title>
+      <link>https://t.me/cybersecurity_news</link>
+      <guid isPermaLink="false">https://jibranpcccc.github.io/developer-coding-hub/#developer-coding-hub-telegram-20261019-1-2026-10-19</guid>
+      <pubDate>Mon, 19 Oct 2026 06:00:05 GMT</pubDate>
+      <description>Newly verified community added to Developer &amp; Coding Communities Hub: Immediate alerts on 0-day exploits, CVE disclosures, ransomware attacks, and critical enterprise patches.</description>
+    </item>
+<item>
       <title>📅 Today's Fresh Pick: TryHackMe Official Discord (Discord)</title>
       <link>https://discord.gg/tryhackme</link>
       <guid isPermaLink="false">https://jibranpcccc.github.io/developer-coding-hub/#developer-coding-hub-discord-20261018-1-2026-10-18</guid>
@@ -177,13 +184,6 @@
       <guid isPermaLink="false">https://jibranpcccc.github.io/developer-coding-hub/#developer-coding-hub-telegram-20260919-1-2026-09-19</guid>
       <pubDate>Sat, 19 Sep 2026 06:00:05 GMT</pubDate>
       <description>Newly verified community added to Developer &amp; Coding Communities Hub: Curated daily Python scripts, architectural patterns, release alerts, and performance optimization guides.</description>
-    </item>
-<item>
-      <title>📅 Today's Fresh Pick: HashiCorp Discuss Community (Forum)</title>
-      <link>https://discuss.hashicorp.com</link>
-      <guid isPermaLink="false">https://jibranpcccc.github.io/developer-coding-hub/#developer-coding-hub-forum-20260918-1-2026-09-18</guid>
-      <pubDate>Fri, 18 Sep 2026 06:14:13 GMT</pubDate>
-      <description>Newly verified community added to Developer &amp; Coding Communities Hub: Official forum for Terraform modules, Vault secret management, Nomad orchestration, and Consul networking.</description>
     </item>
   </channel>
 </rss>
