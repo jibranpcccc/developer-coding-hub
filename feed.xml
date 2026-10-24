@@ -7,10 +7,17 @@
     <link>https://jibranpcccc.github.io/developer-coding-hub/</link>
     <description>Fresh curated directory of verified developer communities across Python, JavaScript, DevOps, Web3, and AI/ML.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 23 Oct 2026 06:00:05 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 24 Oct 2026 06:00:05 GMT</lastBuildDate>
     <atom:link rel="self" type="application/rss+xml" href="https://jibranpcccc.github.io/developer-coding-hub/feed.xml" />
     <atom:link rel="hub" href="https://pubsubhubbub.appspot.com/publish" />
-                                                                                                                                                        <item>
+                                                                                                                                                            <item>
+      <title>📅 Today's Fresh Pick: r/technology World News (Reddit)</title>
+      <link>https://www.reddit.com/r/technology/</link>
+      <guid isPermaLink="false">https://jibranpcccc.github.io/developer-coding-hub/#developer-coding-hub-reddit-20261024-1-2026-10-24</guid>
+      <pubDate>Sat, 24 Oct 2026 06:00:05 GMT</pubDate>
+      <description>Newly verified community added to Developer &amp; Coding Communities Hub: A dedicated forum for major news, regulatory developments, and ethical issues in the tech ecosystem.</description>
+    </item>
+<item>
       <title>📅 Today's Fresh Pick: OWASP CheatSheet Discussions (GitHub)</title>
       <link>https://github.com/OWASP/CheatSheetSeries/discussions</link>
       <guid isPermaLink="false">https://jibranpcccc.github.io/developer-coding-hub/#developer-coding-hub-github-20261023-1-2026-10-23</guid>
@@ -177,13 +184,6 @@
       <guid isPermaLink="false">https://jibranpcccc.github.io/developer-coding-hub/#developer-coding-hub-reddit-20260924-1-2026-09-24</guid>
       <pubDate>Thu, 24 Sep 2026 06:00:09 GMT</pubDate>
       <description>Newly verified community added to Developer &amp; Coding Communities Hub: Discussions, releases, frameworks, and architecture patterns from across the JavaScript and ECMAScript ecosystem.</description>
-    </item>
-<item>
-      <title>📅 Today's Fresh Pick: Rust Language News &amp; Updates (Telegram)</title>
-      <link>https://t.me/rust_lang_news</link>
-      <guid isPermaLink="false">https://jibranpcccc.github.io/developer-coding-hub/#developer-coding-hub-telegram-20260923-1-2026-09-23</guid>
-      <pubDate>Wed, 23 Sep 2026 06:00:06 GMT</pubDate>
-      <description>Newly verified community added to Developer &amp; Coding Communities Hub: Real-time updates, releases, and deep-dive technical articles from the Rust systems ecosystem.</description>
     </item>
   </channel>
 </rss>
