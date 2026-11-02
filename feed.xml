@@ -7,10 +7,17 @@
     <link>https://jibranpcccc.github.io/developer-coding-hub/</link>
     <description>Fresh curated directory of verified developer communities across Python, JavaScript, DevOps, Web3, and AI/ML.</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 01 Nov 2026 09:06:01 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 02 Nov 2026 06:00:05 GMT</lastBuildDate>
     <atom:link rel="self" type="application/rss+xml" href="https://jibranpcccc.github.io/developer-coding-hub/feed.xml" />
     <atom:link rel="hub" href="https://pubsubhubbub.appspot.com/publish" />
-                                                                                                                                                                                    <item>
+                                                                                                                                                                                        <item>
+      <title>📅 Today's Fresh Pick: Hacker News Community (Forum)</title>
+      <link>https://news.ycombinator.com</link>
+      <guid isPermaLink="false">https://jibranpcccc.github.io/developer-coding-hub/#developer-coding-hub-forum-20261031-1-2026-11-02</guid>
+      <pubDate>Mon, 02 Nov 2026 06:00:05 GMT</pubDate>
+      <description>Newly verified community added to Developer &amp; Coding Communities Hub: Y Combinator's flagship intellectual community discussing software engineering, science, and startup mechanics.</description>
+    </item>
+<item>
       <title>📅 Today's Fresh Pick: Hacker News Community (Forum)</title>
       <link>https://news.ycombinator.com</link>
       <guid isPermaLink="false">https://jibranpcccc.github.io/developer-coding-hub/#developer-coding-hub-forum-20261031-1-2026-11-01</guid>
@@ -177,13 +184,6 @@
       <guid isPermaLink="false">https://jibranpcccc.github.io/developer-coding-hub/#developer-coding-hub-discord-20261003-1-2026-10-03</guid>
       <pubDate>Sat, 03 Oct 2026 06:24:19 GMT</pubDate>
       <description>Newly verified community added to Developer &amp; Coding Communities Hub: The official Discord community for Vue.js, Nuxt, Vite, Pinia, and frontend ecosystem tools.</description>
-    </item>
-<item>
-      <title>📅 Today's Fresh Pick: Next.js Developers Discord (Discord)</title>
-      <link>https://discord.gg/nextjs</link>
-      <guid isPermaLink="false">https://jibranpcccc.github.io/developer-coding-hub/#developer-coding-hub-discord-20261002-1-2026-10-02</guid>
-      <pubDate>Fri, 02 Oct 2026 06:00:05 GMT</pubDate>
-      <description>Newly verified community added to Developer &amp; Coding Communities Hub: Official community Discord for Vercel Next.js developers, Server Components, and App Router architectures.</description>
     </item>
   </channel>
 </rss>
