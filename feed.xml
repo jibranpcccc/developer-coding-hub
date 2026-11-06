@@ -7,10 +7,17 @@
     <link>https://jibranpcccc.github.io/developer-coding-hub/</link>
     <description>Fresh curated directory of verified developer communities across Python, JavaScript, DevOps, Web3, and AI/ML.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 05 Nov 2026 07:31:12 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 06 Nov 2026 06:00:05 GMT</lastBuildDate>
     <atom:link rel="self" type="application/rss+xml" href="https://jibranpcccc.github.io/developer-coding-hub/feed.xml" />
     <atom:link rel="hub" href="https://pubsubhubbub.appspot.com/publish" />
-                                                                                                                                                                                                    <item>
+                                                                                                                                                                                                        <item>
+      <title>📅 Today's Fresh Pick: Hacker News Community (Forum)</title>
+      <link>https://news.ycombinator.com</link>
+      <guid isPermaLink="false">https://jibranpcccc.github.io/developer-coding-hub/#developer-coding-hub-forum-20261031-1-2026-11-06</guid>
+      <pubDate>Fri, 06 Nov 2026 06:00:05 GMT</pubDate>
+      <description>Newly verified community added to Developer &amp; Coding Communities Hub: Y Combinator's flagship intellectual community discussing software engineering, science, and startup mechanics.</description>
+    </item>
+<item>
       <title>📅 Today's Fresh Pick: Hacker News Community (Forum)</title>
       <link>https://news.ycombinator.com</link>
       <guid isPermaLink="false">https://jibranpcccc.github.io/developer-coding-hub/#developer-coding-hub-forum-20261031-1-2026-11-05</guid>
@@ -177,13 +184,6 @@
       <guid isPermaLink="false">https://jibranpcccc.github.io/developer-coding-hub/#developer-coding-hub-forum-20261009-1-2026-10-09</guid>
       <pubDate>Fri, 09 Oct 2026 06:00:06 GMT</pubDate>
       <description>Newly verified community added to Developer &amp; Coding Communities Hub: The world's largest repository of solved Python questions, debugging threads, and code snippets.</description>
-    </item>
-<item>
-      <title>📅 Today's Fresh Pick: Next.js GitHub Discussions (GitHub)</title>
-      <link>https://github.com/vercel/next.js/discussions</link>
-      <guid isPermaLink="false">https://jibranpcccc.github.io/developer-coding-hub/#developer-coding-hub-github-20261008-1-2026-10-08</guid>
-      <pubDate>Thu, 08 Oct 2026 06:00:05 GMT</pubDate>
-      <description>Newly verified community added to Developer &amp; Coding Communities Hub: Active community discussions and RFCs on Next.js architectures, streaming SSR, and edge rendering.</description>
     </item>
   </channel>
 </rss>
