@@ -7,10 +7,17 @@
     <link>https://jibranpcccc.github.io/developer-coding-hub/</link>
     <description>Fresh curated directory of verified developer communities across Python, JavaScript, DevOps, Web3, and AI/ML.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 09 Nov 2026 06:46:37 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 10 Nov 2026 06:00:05 GMT</lastBuildDate>
     <atom:link rel="self" type="application/rss+xml" href="https://jibranpcccc.github.io/developer-coding-hub/feed.xml" />
     <atom:link rel="hub" href="https://pubsubhubbub.appspot.com/publish" />
-                                                                                                                                                                                                                <item>
+                                                                                                                                                                                                                    <item>
+      <title>📅 Today's Fresh Pick: Hacker News Community (Forum)</title>
+      <link>https://news.ycombinator.com</link>
+      <guid isPermaLink="false">https://jibranpcccc.github.io/developer-coding-hub/#developer-coding-hub-forum-20261031-1-2026-11-10</guid>
+      <pubDate>Tue, 10 Nov 2026 06:00:05 GMT</pubDate>
+      <description>Newly verified community added to Developer &amp; Coding Communities Hub: Y Combinator's flagship intellectual community discussing software engineering, science, and startup mechanics.</description>
+    </item>
+<item>
       <title>📅 Today's Fresh Pick: Hacker News Community (Forum)</title>
       <link>https://news.ycombinator.com</link>
       <guid isPermaLink="false">https://jibranpcccc.github.io/developer-coding-hub/#developer-coding-hub-forum-20261031-1-2026-11-09</guid>
@@ -177,13 +184,6 @@
       <guid isPermaLink="false">https://jibranpcccc.github.io/developer-coding-hub/#developer-coding-hub-reddit-20261013-1-2026-10-13</guid>
       <pubDate>Tue, 13 Oct 2026 06:00:05 GMT</pubDate>
       <description>Newly verified community added to Developer &amp; Coding Communities Hub: Peer-reviewed technical infosec community sharing vulnerability advisories, exploit analysis, and security whitepapers.</description>
-    </item>
-<item>
-      <title>📅 Today's Fresh Pick: r/cybersecurity Defense Hub (Reddit)</title>
-      <link>https://www.reddit.com/r/cybersecurity/</link>
-      <guid isPermaLink="false">https://jibranpcccc.github.io/developer-coding-hub/#developer-coding-hub-reddit-20261011-1-2026-10-11</guid>
-      <pubDate>Sun, 11 Oct 2026 06:00:03 GMT</pubDate>
-      <description>Newly verified community added to Developer &amp; Coding Communities Hub: Primary community for enterprise security analysts, blue teams, compliance frameworks, and threat intelligence.</description>
     </item>
   </channel>
 </rss>
