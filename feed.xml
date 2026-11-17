@@ -7,10 +7,17 @@
     <link>https://jibranpcccc.github.io/developer-coding-hub/</link>
     <description>Fresh curated directory of verified developer communities across Python, JavaScript, DevOps, Web3, and AI/ML.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 16 Nov 2026 07:16:56 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 17 Nov 2026 06:12:07 GMT</lastBuildDate>
     <atom:link rel="self" type="application/rss+xml" href="https://jibranpcccc.github.io/developer-coding-hub/feed.xml" />
     <atom:link rel="hub" href="https://pubsubhubbub.appspot.com/publish" />
-                                                                                                                                                                                                                                <item>
+                                                                                                                                                                                                                                    <item>
+      <title>📅 Today's Fresh Pick: Hacker News Community (Forum)</title>
+      <link>https://news.ycombinator.com</link>
+      <guid isPermaLink="false">https://jibranpcccc.github.io/developer-coding-hub/#developer-coding-hub-forum-20261031-1-2026-11-17</guid>
+      <pubDate>Tue, 17 Nov 2026 06:12:07 GMT</pubDate>
+      <description>Newly verified community added to Developer &amp; Coding Communities Hub: Y Combinator's flagship intellectual community discussing software engineering, science, and startup mechanics.</description>
+    </item>
+<item>
       <title>📅 Today's Fresh Pick: Hacker News Community (Forum)</title>
       <link>https://news.ycombinator.com</link>
       <guid isPermaLink="false">https://jibranpcccc.github.io/developer-coding-hub/#developer-coding-hub-forum-20261031-1-2026-11-16</guid>
@@ -177,13 +184,6 @@
       <guid isPermaLink="false">https://jibranpcccc.github.io/developer-coding-hub/#developer-coding-hub-discord-20261018-1-2026-10-18</guid>
       <pubDate>Sun, 18 Oct 2026 06:00:05 GMT</pubDate>
       <description>Newly verified community added to Developer &amp; Coding Communities Hub: Beginner and intermediate hands-on cybersecurity learning platform with active study groups and walkthrough support.</description>
-    </item>
-<item>
-      <title>📅 Today's Fresh Pick: Hack The Box Official Discord (Discord)</title>
-      <link>https://discord.gg/hackthebox</link>
-      <guid isPermaLink="false">https://jibranpcccc.github.io/developer-coding-hub/#developer-coding-hub-discord-20261017-1-2026-10-17</guid>
-      <pubDate>Sat, 17 Oct 2026 06:00:05 GMT</pubDate>
-      <description>Newly verified community added to Developer &amp; Coding Communities Hub: Official community for Hack The Box users tackling active CTF machines, forensic challenges, and Academy modules.</description>
     </item>
   </channel>
 </rss>
