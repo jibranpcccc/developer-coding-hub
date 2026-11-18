@@ -1,5 +1,25 @@
 [
   {
+    "id": "python-discord",
+    "title": "Python Discord Official",
+    "category": "Python & Data",
+    "platform": "Discord",
+    "memberCount": 385000,
+    "description": "The largest and friendliest Discord community focused on the Python programming language. Offers 24/7 peer code review, specialized channels for machine learning, data science, web development, and recurring open-source hackathons.",
+    "joinUrl": "https://discord.gg/python",
+    "tags": [
+      "python",
+      "beginners",
+      "data-science",
+      "django",
+      "fastapi"
+    ],
+    "verified": true,
+    "featured": true,
+    "lastUpdated": "2026-11-18",
+    "isTodaysPick": true
+  },
+  {
     "id": "developer-coding-hub-forum-20261031-1",
     "title": "Hacker News Community",
     "platform": "Forum",
@@ -15,7 +35,7 @@
     ],
     "verified": true,
     "featured": true,
-    "isTodaysPick": true,
+    "isTodaysPick": false,
     "lastUpdated": "2026-11-18"
   },
   {
@@ -815,26 +835,6 @@
     "featured": true,
     "isTodaysPick": false,
     "lastUpdated": "2026-09-12"
-  },
-  {
-    "id": "python-discord",
-    "title": "Python Discord Official",
-    "category": "Python & Data",
-    "platform": "Discord",
-    "memberCount": 385000,
-    "description": "The largest and friendliest Discord community focused on the Python programming language. Offers 24/7 peer code review, specialized channels for machine learning, data science, web development, and recurring open-source hackathons.",
-    "joinUrl": "https://discord.gg/python",
-    "tags": [
-      "python",
-      "beginners",
-      "data-science",
-      "django",
-      "fastapi"
-    ],
-    "verified": true,
-    "featured": true,
-    "lastUpdated": "2026-09-03",
-    "isTodaysPick": false
   },
   {
     "id": "reddit-python",
