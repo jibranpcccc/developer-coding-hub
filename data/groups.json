@@ -1,5 +1,25 @@
 [
   {
+    "id": "reddit-python",
+    "title": "r/Python Community",
+    "category": "Python & Data",
+    "platform": "Reddit",
+    "memberCount": 1240000,
+    "description": "The official Reddit hub for Python programming news, package releases, deep-dive architectural discussions, tutorials, and Python PEP enhancement updates.",
+    "joinUrl": "https://www.reddit.com/r/Python/",
+    "tags": [
+      "reddit",
+      "python",
+      "open-source",
+      "news",
+      "pep"
+    ],
+    "verified": true,
+    "featured": true,
+    "lastUpdated": "2026-11-19",
+    "isTodaysPick": true
+  },
+  {
     "id": "python-discord",
     "title": "Python Discord Official",
     "category": "Python & Data",
@@ -17,7 +37,7 @@
     "verified": true,
     "featured": true,
     "lastUpdated": "2026-11-18",
-    "isTodaysPick": true
+    "isTodaysPick": false
   },
   {
     "id": "developer-coding-hub-forum-20261031-1",
@@ -835,26 +855,6 @@
     "featured": true,
     "isTodaysPick": false,
     "lastUpdated": "2026-09-12"
-  },
-  {
-    "id": "reddit-python",
-    "title": "r/Python Community",
-    "category": "Python & Data",
-    "platform": "Reddit",
-    "memberCount": 1240000,
-    "description": "The official Reddit hub for Python programming news, package releases, deep-dive architectural discussions, tutorials, and Python PEP enhancement updates.",
-    "joinUrl": "https://www.reddit.com/r/Python/",
-    "tags": [
-      "reddit",
-      "python",
-      "open-source",
-      "news",
-      "pep"
-    ],
-    "verified": true,
-    "featured": false,
-    "lastUpdated": "2026-09-03",
-    "isTodaysPick": false
   },
   {
     "id": "python-developers-tg",
