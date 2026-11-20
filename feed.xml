@@ -7,10 +7,17 @@
     <link>https://jibranpcccc.github.io/developer-coding-hub/</link>
     <description>Fresh curated directory of verified developer communities across Python, JavaScript, DevOps, Web3, and AI/ML.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 19 Nov 2026 06:00:03 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 20 Nov 2026 06:00:03 GMT</lastBuildDate>
     <atom:link rel="self" type="application/rss+xml" href="https://jibranpcccc.github.io/developer-coding-hub/feed.xml" />
     <atom:link rel="hub" href="https://pubsubhubbub.appspot.com/publish" />
-                                                                                                                                                                                                                                                <item>
+                                                                                                                                                                                                                                                    <item>
+      <title>📅 Today's Fresh Pick: Python Global Developers (Telegram)</title>
+      <link>https://t.me/PythonDevelopersGlobal</link>
+      <guid isPermaLink="false">https://jibranpcccc.github.io/developer-coding-hub/#python-developers-tg-2026-11-20</guid>
+      <pubDate>Fri, 20 Nov 2026 06:00:03 GMT</pubDate>
+      <description>Newly verified community added to Developer &amp; Coding Communities Hub: High-signal Telegram channel and chat group delivering daily Python tips, asyncio deep dives, backend architecture diagrams, and curated engineering vacancies.</description>
+    </item>
+<item>
       <title>📅 Today's Fresh Pick: r/Python Community (Reddit)</title>
       <link>https://www.reddit.com/r/Python/</link>
       <guid isPermaLink="false">https://jibranpcccc.github.io/developer-coding-hub/#reddit-python-2026-11-19</guid>
@@ -177,13 +184,6 @@
       <guid isPermaLink="false">https://jibranpcccc.github.io/developer-coding-hub/#developer-coding-hub-forum-20261022-1-2026-10-22</guid>
       <pubDate>Thu, 22 Oct 2026 06:00:05 GMT</pubDate>
       <description>Newly verified community added to Developer &amp; Coding Communities Hub: Vibrant discussion boards for hints on retired machines, certification advice, and offensive tooling.</description>
-    </item>
-<item>
-      <title>📅 Today's Fresh Pick: 0x00sec Hacking Community (Forum)</title>
-      <link>https://0x00sec.org</link>
-      <guid isPermaLink="false">https://jibranpcccc.github.io/developer-coding-hub/#developer-coding-hub-forum-20261021-1-2026-10-21</guid>
-      <pubDate>Wed, 21 Oct 2026 06:00:05 GMT</pubDate>
-      <description>Newly verified community added to Developer &amp; Coding Communities Hub: Elite technical security forum sharing binary exploitation writeups, malware analysis, and hardware hacking.</description>
     </item>
   </channel>
 </rss>
