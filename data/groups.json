@@ -1,5 +1,25 @@
 [
   {
+    "id": "python-data-ninjas-wa",
+    "title": "Data Science & Python Ninjas",
+    "category": "Python & Data",
+    "platform": "WhatsApp",
+    "memberCount": 1024,
+    "description": "Vetted WhatsApp community for professional data scientists and Python engineers discussing Pandas, Polars, PySpark, and enterprise ETL pipelines.",
+    "joinUrl": "https://chat.whatsapp.com/invite/python-data-ninjas",
+    "tags": [
+      "whatsapp",
+      "pandas",
+      "polars",
+      "etl",
+      "data-engineering"
+    ],
+    "verified": true,
+    "featured": true,
+    "lastUpdated": "2026-11-21",
+    "isTodaysPick": true
+  },
+  {
     "id": "python-developers-tg",
     "title": "Python Global Developers",
     "category": "Python & Data",
@@ -17,7 +37,7 @@
     "verified": true,
     "featured": true,
     "lastUpdated": "2026-11-20",
-    "isTodaysPick": true
+    "isTodaysPick": false
   },
   {
     "id": "reddit-python",
@@ -875,26 +895,6 @@
     "featured": true,
     "isTodaysPick": false,
     "lastUpdated": "2026-09-12"
-  },
-  {
-    "id": "python-data-ninjas-wa",
-    "title": "Data Science & Python Ninjas",
-    "category": "Python & Data",
-    "platform": "WhatsApp",
-    "memberCount": 1024,
-    "description": "Vetted WhatsApp community for professional data scientists and Python engineers discussing Pandas, Polars, PySpark, and enterprise ETL pipelines.",
-    "joinUrl": "https://chat.whatsapp.com/invite/python-data-ninjas",
-    "tags": [
-      "whatsapp",
-      "pandas",
-      "polars",
-      "etl",
-      "data-engineering"
-    ],
-    "verified": true,
-    "featured": false,
-    "lastUpdated": "2026-09-03",
-    "isTodaysPick": false
   },
   {
     "id": "hugging-face-discord",
