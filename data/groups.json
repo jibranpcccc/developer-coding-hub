@@ -1,5 +1,25 @@
 [
   {
+    "id": "hugging-face-discord",
+    "title": "Hugging Face Community",
+    "category": "AI & ML",
+    "platform": "Discord",
+    "memberCount": 192000,
+    "description": "The epicenter of open-source AI. Collaborate directly with Hugging Face maintainers on Transformers, Diffusers, PEFT, TRL, vLLM, and local open LLM fine-tuning.",
+    "joinUrl": "https://discuss.huggingface.co",
+    "tags": [
+      "ai",
+      "transformers",
+      "llm",
+      "fine-tuning",
+      "huggingface"
+    ],
+    "verified": true,
+    "featured": true,
+    "lastUpdated": "2026-11-22",
+    "isTodaysPick": true
+  },
+  {
     "id": "python-data-ninjas-wa",
     "title": "Data Science & Python Ninjas",
     "category": "Python & Data",
@@ -17,7 +37,7 @@
     "verified": true,
     "featured": true,
     "lastUpdated": "2026-11-21",
-    "isTodaysPick": true
+    "isTodaysPick": false
   },
   {
     "id": "python-developers-tg",
@@ -895,26 +915,6 @@
     "featured": true,
     "isTodaysPick": false,
     "lastUpdated": "2026-09-12"
-  },
-  {
-    "id": "hugging-face-discord",
-    "title": "Hugging Face Community",
-    "category": "AI & ML",
-    "platform": "Discord",
-    "memberCount": 192000,
-    "description": "The epicenter of open-source AI. Collaborate directly with Hugging Face maintainers on Transformers, Diffusers, PEFT, TRL, vLLM, and local open LLM fine-tuning.",
-    "joinUrl": "https://discuss.huggingface.co",
-    "tags": [
-      "ai",
-      "transformers",
-      "llm",
-      "fine-tuning",
-      "huggingface"
-    ],
-    "verified": true,
-    "featured": true,
-    "lastUpdated": "2026-09-03",
-    "isTodaysPick": false
   },
   {
     "id": "reddit-machinelearning",
