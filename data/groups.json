@@ -1,5 +1,25 @@
 [
   {
+    "id": "generative-ai-wa",
+    "title": "Generative AI Engineering Guild",
+    "category": "AI & ML",
+    "platform": "WhatsApp",
+    "memberCount": 1024,
+    "description": "High-density discussion network for founders and senior engineers building generative AI products, agent swarms, and enterprise MCP servers.",
+    "joinUrl": "https://chat.whatsapp.com/invite/generative-ai-eng",
+    "tags": [
+      "whatsapp",
+      "genai",
+      "agents",
+      "mcp",
+      "llmops"
+    ],
+    "verified": true,
+    "featured": true,
+    "lastUpdated": "2026-11-26",
+    "isTodaysPick": true
+  },
+  {
     "id": "llm-practitioners-tg",
     "title": "Deep Learning & LLM Practitioners",
     "category": "AI & ML",
@@ -17,7 +37,7 @@
     "verified": true,
     "featured": true,
     "lastUpdated": "2026-11-25",
-    "isTodaysPick": true
+    "isTodaysPick": false
   },
   {
     "id": "pytorch-discord",
@@ -974,26 +994,6 @@
     "featured": true,
     "isTodaysPick": false,
     "lastUpdated": "2026-09-12"
-  },
-  {
-    "id": "generative-ai-wa",
-    "title": "Generative AI Engineering Guild",
-    "category": "AI & ML",
-    "platform": "WhatsApp",
-    "memberCount": 1024,
-    "description": "High-density discussion network for founders and senior engineers building generative AI products, agent swarms, and enterprise MCP servers.",
-    "joinUrl": "https://chat.whatsapp.com/invite/generative-ai-eng",
-    "tags": [
-      "whatsapp",
-      "genai",
-      "agents",
-      "mcp",
-      "llmops"
-    ],
-    "verified": true,
-    "featured": false,
-    "lastUpdated": "2026-09-03",
-    "isTodaysPick": false
   },
   {
     "id": "the-odin-project-discord",
